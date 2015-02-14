@@ -6,7 +6,7 @@ function generate_host_id {
 	LANGUAGE=$(set | egrep '^(LANGUAGE)')
 	hostid=$HOSTID$KERNELVERS$LANG$LANGUAGE
 	#hostid=$LANGUAGE
-	echo $hostid
+	#echo $hostid
 }
 
 function generate_key {
@@ -14,7 +14,7 @@ function generate_key {
 	generate_host_id
 	#hostid=$(generate_host_id)
 	echo "hostid =" $hostid 
-	echo $hostid | wc -c
+	#echo $hostid | wc -c
 
 	#iterative hashing with salt
 	key=$(echo -n $(echo -n $salt$hostid | md5sum|awk '{print $1}'))
@@ -59,13 +59,10 @@ read numHashes
 echo "Generating key from host information..."
 generate_key $numHashes
 #echo SALT=$SALT
-echo hostid passed into python=$hostid
-echo $hostid | wc -c
-#echo numHashes=$numHashes
-output=$(python hash.py "$SALT" "$hostid" "$numHashes")
-#output2=$(python hash.py "Uj_y6L*-mhc@77d" "007f0101Linux 3.13.0-32-generic x86_64LANG=en_US.UTF-8 LANGUAGE=en_US" "3")
-echo python output = $output
-#echo python output2 = $output2
+#echo hostid passed into python=$hostid
+#echo $hostid | wc -c
+#output=$(python hash.py "$SALT" "$hostid" "$numHashes")
+#echo python output = $output
 echo -n "Enter whether you would like to encrypt or decrypt and press [ENTER]: "
 read choice
 $choice
