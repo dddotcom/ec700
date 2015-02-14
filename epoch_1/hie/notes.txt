@@ -1,0 +1,4 @@
+hostid = /usr/bin/hostid
+systemPlatform = uname -m 
+kernelVersion = uname -r 
+memoryLeft = cat /proc/meminfo | grep ^MemTotal (not stable)
