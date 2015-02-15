@@ -5,7 +5,6 @@ function generate_host_id {
 	LANG=$(set | egrep '^(LANG=)')
 	LANGUAGE=$(set | egrep '^(LANGUAGE)')
 	hostid=$HOSTID$KERNELVERS$LANG$LANGUAGE
-	#echo $hostid
 }
 
 function generate_key {
@@ -34,12 +33,12 @@ function generate_key {
 
 #generate key using python script, much faster
 function generate_key_python {
-	echo -e "\nhost id =$hostid"
+	echo -e "\nhost id = \"$hostid\""
 	START=$(date +%s.%N)
 	key=$(python hash.py "$SALT" "$hostid" "$numHashes" 2>&1)
 	END=$(date +%s.%N)
-	#echo time elapsed = $(echo $END - $START | bc)s
-	echo -e "$1th hash =$key\n"
+	echo -e "$1th hash = \"$key\""
+	echo -e "time to generate hash = $(echo $END - $START | bc)s\n"
 }
 
 #encrypt hello.c with gpg 
@@ -49,6 +48,7 @@ function encrypt {
 		rm *.gpg
 	fi
 	gpg --batch --passphrase $key -c  $ENCRYPT_FILENAME
+	echo "Successfully encrypted $ENCRYPT_FILENAME"
 }
 
 #decrypt hello.c.gpg with gpg
@@ -67,9 +67,11 @@ ENCRYPT_FILENAME="hello.c"
 SALT="Uj_y6L*-mhc@77d"
 #SECOND_SALT="Z5iO6Gk+XJMd^7#"
 #VERIFICATION_HASH=""
+#generate random 16bytes from /dev/urandom
+#random="$(cat /dev/urandom | tr -dc '0-9a-zA-Z!@#$%^&*_+-' | head -c 15)"
 
 numHashes=""
-while [[ ! $numHashes =~ ^[0-9]+$ ]]; do
+while [[ ! $numHashes =~ ^[1-9][0-9]*$ ]]; do
     echo -n "Enter number of times to hash iteratively and press [ENTER]: "
     read numHashes
 done
@@ -78,12 +80,11 @@ generate_host_id
 echo "Generating key from host information..."
 generate_key_python $numHashes
 
-echo -n "Enter whether you would like to encrypt or decrypt and press [ENTER]: "
+echo -n "Enter whether you would like to [encrypt/decrypt] and press [ENTER]: "
 read choice
 
 while [[ $choice != encrypt && $choice != decrypt ]]; do
-	echo "string doesn't match"
-	echo -n "Enter whether you would like to encrypt or decrypt and press [ENTER]: "
+	echo -n -e "input '$choice' not recognized.\nEnter whether you would like to [encrypt/decrypt] and press [ENTER]: "
 	read choice
 
 done
