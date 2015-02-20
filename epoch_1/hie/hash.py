@@ -30,6 +30,7 @@ def main():
 	if debug:
 		print "salt= " + salt
 		print "hostid = " + hostid
+		print "salt+hostid= " + salt+hostid
 		print "1st hash = " + tempHash
 		print sys.argv[3] +"th hash = " + tempHash
 		print "time elapsed = " + str(duration.microseconds/float(1000)) + "ms"

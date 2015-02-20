@@ -34,6 +34,7 @@ function generate_key {
 #generate key using python script, much faster
 function generate_key_python {
 	echo -e "\nhost id = \"$hostid\""
+	echo -e "SALT = \"$SALT\""
 	START=$(date +%s.%N)
 	key=$(python hash.py "$SALT" "$hostid" "$numHashes" 2>&1)
 	END=$(date +%s.%N)
