@@ -1,0 +1,5 @@
+hostid = 'UbuntuTrustyeng'
+verify_salt = 'Uj_y6L*-mhc@77d'
+payload_salt = 'FnF4Imd5cQ_z!bF'
+dk_verify = '82b3081558dabf5306ca2fcf421afed567da612c5b197a4159dd756ca8c71a98'
+dk_payload = '32f7ddbbb3047df283b1920bf3bbbde80230cdec9b7f6825169e20293f825fea'
