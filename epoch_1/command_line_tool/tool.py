@@ -2,7 +2,13 @@ import subprocess
 import hashlib
 import binascii
 from collections import OrderedDict
+import fileinput
+import shutil
+import sys
 
+keyFile = "key.cpp"
+keyTemplate = "keyTemplate.cpp"
+hostid_components = ""
 debug = False
 dk_verify = ""
 dk_payload = ""
@@ -60,13 +66,30 @@ def output_to_file():
 	f.write("dk_payload = '" + dk_payload + "'\n")
 	f.close()
 
+def create_cpp():
+	replaceThis = 'std::string cmdListPy = "";'
+	replaceWith = 'std::string cmdListPy = "' + hostid_components + '";'
+	
+	replaceVerSalt = 'static const char verSalt [] = "";'
+	replaceWithVerSalt = 'static const char verSalt [] = "'+ verify_salt +'";'
+
+	replacePayloadSalt = 'static const char decryptSalt [] = "";'
+	replaceWithPayloadSalt = 'static const char decryptSalt [] = "'+ payload_salt +'";'
+
+	#create copy of file
+	shutil.copy(keyTemplate, keyFile)
+	#replace string with my cmds
+	for line in fileinput.input(newFile, inplace=True):
+		sys.stdout.write(line.replace(replaceThis, replaceWith))
+	for line in fileinput.input(newFile, inplace=True):
+		sys.stdout.write(line.replace(replaceVerSalt, replaceWithVerSalt))
+	for line in fileinput.input(newFile, inplace=True):
+		sys.stdout.write(line.replace(replacePayloadSalt, replaceWithPayloadSalt))
+
+
 #get_new_salt()
 #generate_key()
 #output_to_file()
+create_cpp()
 
-print system_info.keys()[0]
-print system_info.keys()[1]
-print system_info.keys()[2]
-print system_info.keys()[3]
-print system_info.keys()[4]
-print system_info.keys()[5]
+

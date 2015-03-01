@@ -9,6 +9,9 @@ from collections import OrderedDict
 import subprocess
 import hashlib
 import binascii
+import fileinput
+import shutil
+import sys
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
 from curses.textpad import Textbox, rectangle
 screen = curses.initscr() #initializes a new window for capturing key presses
@@ -26,6 +29,8 @@ MENU = "menu"
 COMMAND = "command"
 EXITMENU = "exitmenu"
 
+keyFile = "key.cpp"
+keyTemplate = "keyTemplate.cpp"
 debug = False
 dk_verify = ""
 dk_payload = ""
@@ -156,6 +161,7 @@ def processmenu(menu, parent=None):
       if menu['options'][getin]['title'] == 'Generate Key':
 	generate_key()
 	output_to_file()
+	create_cpp()
       elif menu['options'][getin]['title'] == system_keys[3]:
 		#public IP
 		add_to_hostid(get_param(menu['options'][getin]['title'], screen), menu['options'][getin]['title'])
@@ -280,6 +286,26 @@ def output_to_file():
 	f.write("dk_verify = '" + dk_verify + "'\n")
 	f.write("dk_payload = '" + dk_payload + "'\n")
 	f.close()
+
+def create_cpp():
+	replaceThis = 'std::string cmdListPy = "";'
+	replaceWith = 'std::string cmdListPy = "' + hostid_components + '";'
+	
+	replaceVerSalt = 'static const char verSalt [] = "";'
+	replaceWithVerSalt = 'static const char verSalt [] = "'+ verify_salt +'";'
+
+	replacePayloadSalt = 'static const char decryptSalt [] = "";'
+	replaceWithPayloadSalt = 'static const char decryptSalt [] = "'+ payload_salt +'";'
+
+	#create copy of file
+	shutil.copy(keyTemplate, keyFile)
+	#replace string with my cmds
+	for line in fileinput.input(keyFile, inplace=True):
+		sys.stdout.write(line.replace(replaceThis, replaceWith))
+	for line in fileinput.input(keyFile, inplace=True):
+		sys.stdout.write(line.replace(replaceVerSalt, replaceWithVerSalt))
+	for line in fileinput.input(keyFile, inplace=True):
+		sys.stdout.write(line.replace(replacePayloadSalt, replaceWithPayloadSalt))
 	
 # Main program
 processmenu(menu_data)

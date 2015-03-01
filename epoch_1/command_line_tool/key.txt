@@ -1,5 +1,0 @@
-hostid = ''
-verify_salt = 'bK3KdMXZ^&tUWmUI'
-payload_salt = 'u2F$nyfnQyQ+N0ga'
-dk_verify = '89b1c6f9a042dd39dc70c6e7ae583c40799c06dadbb846b64e66e963d70ebc8c'
-dk_payload = '461c905a4799b6601112cbce04513424683993afa6411b0dc6673988cf8834c9'
