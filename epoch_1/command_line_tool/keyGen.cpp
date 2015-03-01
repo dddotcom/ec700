@@ -38,12 +38,11 @@ std::string getSysInfo(const char *cmd) {
 }
 
 
-/******************************* Main *************************************************/
+/****************************************************** Main *****************************************************************/
 // Call the chosen functions, concatenate the outputs, and return the resulting string (i.e. the "password")
 
 int main()
 {
-	// Pass the cmdListPy to cmdList
 	//std::string cmdListPy = "extIpCmd;firefoxVerCmd;langCmd;"; // List of commands passed by the python tool
 	std::string cmdListPy = "";
 	std::string delimiter = ";";
@@ -82,9 +81,14 @@ int main()
 
 	// Remove the newlines
 	hostId.erase(std::remove(hostId.begin(), hostId.end(), '\n'), hostId.end());
-	std::cout << hostId << std::endl; // DEBUGGING
 
-	hostIdFinal = hostId.c_str(); // Convert host ID to C-style string
+	// Print out values
+	std::cout << "Host ID: " << hostId << std::endl; // DEBUGGING
+	std::cout << "Verification salt: " << verSalt << std::endl; // DEBUGGING
+	std::cout << "Decryption salt: " << decryptSalt << std::endl; // DEBUGGING
+	
+	// Convert host ID to C-style string
+	hostIdFinal = hostId.c_str(); 
 	
 	return 0;
 }
