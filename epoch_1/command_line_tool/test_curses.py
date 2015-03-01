@@ -42,7 +42,7 @@ system_info = OrderedDict({
 })
 
 system_keys = ["Code name", "Language", "OS", "Public IP", "Firefox Version"]
-#hostid_components = []
+cpp_keys = ["codeNameCmd", "langCmd", "osCmd", "extIpCmd", "firefoxVerCmd"]
 hostid_components = ""
 
 menu_data = {
@@ -156,9 +156,6 @@ def processmenu(menu, parent=None):
       if menu['options'][getin]['title'] == 'Generate Key':
 	generate_key()
 	output_to_file()
-#      elif menu['options'][getin]['title'] == system_keys[0]:
-		#code name
-#		add_to_hostid_fromsubmenu(get_param(menu['options'][getin]['title'], screen), system_keys[0])
       elif menu['options'][getin]['title'] == system_keys[3]:
 		#public IP
 		add_to_hostid(get_param(menu['options'][getin]['title'], screen), menu['options'][getin]['title'])
@@ -183,14 +180,15 @@ def processmenu(menu, parent=None):
 	elif menu['options'][getin]['title'] != 'Custom value':
 		hostid = hostid + menu['options'][getin]['title'] 
 		exitmenu = True
-		#hostid_components = hostid_components + menu['options'][getin]['title'] + ";"
-		hostid_components = hostid_components + menu['title'] + ";"
+		#hostid_components = hostid_components + menu['title'] + ";"
+		hostid_components = hostid_components + cpp_keys[system_keys.index(menu['title'])] + ";"
 	else:    
 		info = get_param(menu['options'][getin]['title'], screen)  
 		if info != "q":
 			hostid = hostid + info			
 			exitmenu = True		
-			hostid_components = hostid_components + menu['title'] + ";"
+			#hostid_components = hostid_components + menu['title'] + ";"
+			hostid_components = hostid_components + cpp_keys[system_keys.index(menu['title'])] + ";"
       screen.clear() #clears previous screen on key press and updates display based on pos
       curses.reset_prog_mode()   # reset to 'current' curses environment
       curses.curs_set(1)         # reset doesn't do this right
@@ -216,6 +214,7 @@ def processmenu(menu, parent=None):
           processmenu(menu['options'][getin], menu) # display the submenu
           screen.clear() #clears previous screen on key press and updates display based on pos
 	  screen.addstr(15,2, "hostid = " + hostid) #current hostid status
+	  screen.addstr(16,2, "hostid_components = " + hostid_components) #current hostid status
     elif menu['options'][getin]['type'] == EXITMENU:
           exitmenu = True
 
@@ -234,13 +233,15 @@ def add_to_hostid_fromsubmenu(info, component_key):
 	global hostid_components
 	if menu['options'][getin]['title'] != 'Custom value':
 		hostid = hostid + info
-		hostid_components = hostid_components + component_key + ";"
+		#hostid_components = hostid_components + component_key + ";"
+		hostid_components = hostid_components + cpp_keys[system_keys.index(component_key)] + ";"
 		exitmenu = True
 	else:    
 		info = get_param(menu['options'][getin]['title'], stdscr)  
 		if info != "q":
 			hostid = hostid + info
-			hostid_components = hostid_components + component_key + ";"
+			#hostid_components = hostid_components + component_key + ";"
+			hostid_components = hostid_components + cpp_keys[system_keys.index(component_key)] + ";"
 			exitmenu = True		
 
 def add_to_hostid(info, component_key):
@@ -248,7 +249,8 @@ def add_to_hostid(info, component_key):
 	global hostid_components
 	if info != "q":
 		hostid = hostid + info
-		hostid_components = hostid_components + component_key + ";"
+		#hostid_components = hostid_components + component_key + ";"
+		hostid_components = hostid_components + cpp_keys[system_keys.index(component_key)] + ";"
 
 def get_new_salt():
 	#generate a new 16 byte salt if you want one 
