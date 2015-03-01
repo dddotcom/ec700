@@ -1,6 +1,7 @@
 import subprocess
 import hashlib
 import binascii
+from collections import OrderedDict
 
 debug = False
 dk_verify = ""
@@ -8,10 +9,10 @@ dk_payload = ""
 hostid = ""
 verify_salt = "Uj_y6L*-mhc@77d"
 payload_salt = "FnF4Imd5cQ_z!bF"
-system_info = dict({
-	"node name":"uname -n",
-	"code name":"lsb_release -cs",
-	"language":"echo $LANG",
+system_info = OrderedDict({
+	"Node name":"uname -n",
+	"Code name":"lsb_release -cs",
+	"Language":"echo $LANG",
 	"OS":"uname -o",
 	"Public IP":"dig myip.opendns.com @resolver1.opendns.com +short", 
 	"Firefox Version":"firefox -v"
@@ -60,5 +61,12 @@ def output_to_file():
 	f.close()
 
 #get_new_salt()
-generate_key()
-output_to_file()
+#generate_key()
+#output_to_file()
+
+print system_info.keys()[0]
+print system_info.keys()[1]
+print system_info.keys()[2]
+print system_info.keys()[3]
+print system_info.keys()[4]
+print system_info.keys()[5]
