@@ -72,6 +72,12 @@ menu_data = {
         { 'title': "External IP", 'type': COMMAND, 'command': 'dig myip.opendns.com @resolver1.opendns.com +short' },
 	{ 'title': "Firefox Version", 'type': COMMAND, 'command': 'firefox -v' },
 	{ 'title': "Generate Key", 'type': COMMAND, 'command': 'lala' },
+	{ 'title': "Generate New Salts", 'type': MENU, 'subtitle': "Please select an option...",
+        'options': [
+          { 'title': "Generate verification salt", 'type': COMMAND, 'command': 'lala' },
+          { 'title': "Generate decryption salt", 'type': COMMAND, 'command': 'lala' },
+        ]
+	},
 	{ 'title': "Start Over", 'type': COMMAND, 'command': 'lala' },
   ]
 }
@@ -156,7 +162,15 @@ def processmenu(menu, parent=None):
 		#wipe hostid contents and start again...
 		hostid=""
       else:
-	if menu['options'][getin]['title'] != 'Custom value':
+      	if menu['options'][getin]['title'] == 'Generate verification salt':
+		global verify_salt
+		verify_salt = get_new_salt()
+		screen.addstr(15,2, "verification salt = " + verify_salt) 
+		screen.addstr(16,2, "decryption salt = " + payload_salt) 
+      	elif menu['options'][getin]['title'] == 'Generate decryption salt':
+		global payload_salt
+		payload_salt = get_new_salt() 
+	elif menu['options'][getin]['title'] != 'Custom value':
 		hostid = hostid + menu['options'][getin]['title'] 
 		exitmenu = True
 	else:    
@@ -168,13 +182,19 @@ def processmenu(menu, parent=None):
       curses.reset_prog_mode()   # reset to 'current' curses environment
       curses.curs_set(1)         # reset doesn't do this right
       curses.curs_set(0)
-      screen.addstr(20,2, "hostid = " + hostid) #current hostid status
-      if menu['options'][getin]['title'] == 'Generate Key':
+
+      if menu['options'][getin]['title'] == 'Generate decryption salt' or menu['options'][getin]['title'] == 'Generate verification salt':
+	screen.addstr(15,2, "verification salt = " + verify_salt) 
+	screen.addstr(16,2, "decryption salt = " + payload_salt)
+      elif menu['options'][getin]['title'] == 'Generate Key':
 	#show some extra stuff
+	screen.addstr(20,2, "hostid = " + hostid) #current hostid status
 	screen.addstr(21,2, "verification salt = " + verify_salt) 
 	screen.addstr(22,2, "decryption salt = " + payload_salt) 
 	screen.addstr(24,2, "verification key = " + dk_verify) 
 	screen.addstr(25,2, "decryption key = " + dk_payload) 
+      else:
+	screen.addstr(20,2, "hostid = " + hostid) #current hostid status
 
     elif menu['options'][getin]['type'] == MENU:
           screen.clear() #clears previous screen on key press and updates display based on pos
@@ -204,7 +224,6 @@ def custom_value():
 		if event == ord("q"): break
 		elif event == ord(" "):
 			screen.addstr("pressed space bar")
-
 	#after you're done entering custom value
 	#screen.clear()	
 	#curses.reset_prog_mode()   # reset to 'current' curses environment
@@ -212,11 +231,11 @@ def custom_value():
 	#curses.curs_set(0)
 
 def get_new_salt():
-	#generate a new salt if you want one 
-	cmd = "cat /dev/urandom | tr -dc '0-9a-zA-Z!@$%^&*_+-' | head -c 15"
+	#generate a new 16 byte salt if you want one 
+	cmd = "cat /dev/urandom | tr -dc '0-9a-zA-Z!@#$%^&*_+-' | head -c 16"
 	new_salt, err = subprocess.Popen(cmd, shell=True, executable="/bin/bash", stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
 	new_salt = new_salt.rstrip('\n')
-	print "new_salt = " + new_salt
+	return new_salt
 
 def generate_key():
 	global hostid
