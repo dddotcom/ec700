@@ -9,6 +9,7 @@ import subprocess
 import hashlib
 import binascii
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
+from curses.textpad import Textbox, rectangle
 screen = curses.initscr() #initializes a new window for capturing key presses
 curses.noecho() # Disables automatic echoing of key presses (prevents program from input each key twice)
 curses.cbreak() # Disables line buffering (runs each key as it is pressed rather than waiting for the return key to pressed)
@@ -71,6 +72,7 @@ menu_data = {
         { 'title': "External IP", 'type': COMMAND, 'command': 'dig myip.opendns.com @resolver1.opendns.com +short' },
 	{ 'title': "Firefox Version", 'type': COMMAND, 'command': 'firefox -v' },
 	{ 'title': "Generate Key", 'type': COMMAND, 'command': 'lala' },
+	{ 'title': "Start Over", 'type': COMMAND, 'command': 'lala' },
   ]
 }
 
@@ -110,7 +112,7 @@ def runmenu(menu, parent):
       screen.addstr(5+optioncount,4, "%d - %s" % (optioncount+1, lastoption), textstyle)
       screen.refresh()
       # finished updating screen
-
+    curses.noecho()
     x = screen.getch() # Gets user input
 
     # What is user input?
@@ -142,30 +144,55 @@ def processmenu(menu, parent=None):
       if menu['options'][getin]['title'] == 'Generate Key':
 	generate_key()
 	output_to_file()
-	#print "key generated!"
+      elif menu['options'][getin]['title'] == 'External IP':
+		info = get_param(menu['options'][getin]['title'], screen)  
+		if info != "q":
+			hostid = hostid + info	
+      elif menu['options'][getin]['title'] == 'Firefox Version':
+		info = get_param(menu['options'][getin]['title'], screen)  
+		if info != "q":
+			hostid = hostid + info	
+      elif menu['options'][getin]['title'] == 'Start Over':
+		#wipe hostid contents and start again...
+		hostid=""
       else:
 	if menu['options'][getin]['title'] != 'Custom value':
-		#os.system('reset')
-		#screen.clear() #clears previous screen
-		hostid = hostid + menu['options'][getin]['title']
-		#print "hostid = " + hostid
-		#sleep(1)
+		hostid = hostid + menu['options'][getin]['title'] 
+		exitmenu = True
 	else:    
-		os.system('reset')
-		screen.clear() #clears previous screen
-		custom_value()    
-      		#os.system(menu['options'][getin]['command']) # run the command	
-      		#sleep(1)
+		info = get_param(menu['options'][getin]['title'], screen)  
+		if info != "q":
+			hostid = hostid + info			
+			exitmenu = True		
       screen.clear() #clears previous screen on key press and updates display based on pos
       curses.reset_prog_mode()   # reset to 'current' curses environment
       curses.curs_set(1)         # reset doesn't do this right
       curses.curs_set(0)
+      screen.addstr(20,2, "hostid = " + hostid) #current hostid status
+      if menu['options'][getin]['title'] == 'Generate Key':
+	#show some extra stuff
+	screen.addstr(21,2, "verification salt = " + verify_salt) 
+	screen.addstr(22,2, "decryption salt = " + payload_salt) 
+	screen.addstr(24,2, "verification key = " + dk_verify) 
+	screen.addstr(25,2, "decryption key = " + dk_payload) 
+
     elif menu['options'][getin]['type'] == MENU:
           screen.clear() #clears previous screen on key press and updates display based on pos
           processmenu(menu['options'][getin], menu) # display the submenu
           screen.clear() #clears previous screen on key press and updates display based on pos
+	  screen.addstr(20,2, "hostid = " + hostid) #current hostid status
     elif menu['options'][getin]['type'] == EXITMENU:
           exitmenu = True
+
+def get_param(prompt_string, stdscr):
+     stdscr.clear() #clears previous screen
+     stdscr.border(0)
+     curses.echo()
+     screen.addstr(1,2, "Press [q] to go back") #Subtitle for this menu
+     stdscr.addstr(2, 2, prompt_string)
+     stdscr.refresh()
+     input = stdscr.getstr(4, 2, 60)
+     return input
 
 def custom_value():
 	screen.border(0)
@@ -179,10 +206,10 @@ def custom_value():
 			screen.addstr("pressed space bar")
 
 	#after you're done entering custom value
-	screen.clear()	
-	curses.reset_prog_mode()   # reset to 'current' curses environment
-	curses.curs_set(1)         # reset doesn't do this right
-	curses.curs_set(0)
+	#screen.clear()	
+	#curses.reset_prog_mode()   # reset to 'current' curses environment
+	#curses.curs_set(1)         # reset doesn't do this right
+	#curses.curs_set(0)
 
 def get_new_salt():
 	#generate a new salt if you want one 
