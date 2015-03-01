@@ -1,5 +1,5 @@
-hostid = 'Utopicde_DE.utf8MAC'
+hostid = 'Utopicfr_FR.utf8'
 verify_salt = 'Uj_y6L*-mhc@77d'
 payload_salt = 'FnF4Imd5cQ_z!bF'
-dk_verify = '47b9480dd5e012ef8e3209941ccb09db9ad2cf57b47f3c948666760989cb199f'
-dk_payload = 'f2f0747a7242d493c38534e1ba80e1e5a22681da0077ee0fbb6fff2a90a71275'
+dk_verify = '124c084222d1c4880792219d222ed86880dac7dda5e1d5508cd57dc743f2d23f'
+dk_payload = '89943a7689bd0449a5e632589be90366ad4d3f3ceabcdbcb2857306b211cdaeb'

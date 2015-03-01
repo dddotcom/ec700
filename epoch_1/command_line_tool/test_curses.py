@@ -74,8 +74,6 @@ menu_data = {
   ]
 }
 
-
-
 # This function displays the appropriate menu and returns the option selected
 def runmenu(menu, parent):
 
@@ -152,11 +150,12 @@ def processmenu(menu, parent=None):
 		hostid = hostid + menu['options'][getin]['title']
 		#print "hostid = " + hostid
 		#sleep(1)
-	else:        
+	else:    
 		os.system('reset')
 		screen.clear() #clears previous screen
-      		os.system(menu['options'][getin]['command']) # run the command	
-      		sleep(1)
+		custom_value()    
+      		#os.system(menu['options'][getin]['command']) # run the command	
+      		#sleep(1)
       screen.clear() #clears previous screen on key press and updates display based on pos
       curses.reset_prog_mode()   # reset to 'current' curses environment
       curses.curs_set(1)         # reset doesn't do this right
@@ -167,6 +166,23 @@ def processmenu(menu, parent=None):
           screen.clear() #clears previous screen on key press and updates display based on pos
     elif menu['options'][getin]['type'] == EXITMENU:
           exitmenu = True
+
+def custom_value():
+	screen.border(0)
+	screen.addstr(2,2, "Press [q] to quit") #Subtitle for this menu
+      	screen.addstr(3,2, "Enter Custom Value:\n  ") # Title for this menu
+
+	while True:
+		event = screen.getch()
+		if event == ord("q"): break
+		elif event == ord(" "):
+			screen.addstr("pressed space bar")
+
+	#after you're done entering custom value
+	screen.clear()	
+	curses.reset_prog_mode()   # reset to 'current' curses environment
+	curses.curs_set(1)         # reset doesn't do this right
+	curses.curs_set(0)
 
 def get_new_salt():
 	#generate a new salt if you want one 
@@ -209,7 +225,7 @@ def output_to_file():
 	f.write("dk_verify = '" + dk_verify + "'\n")
 	f.write("dk_payload = '" + dk_payload + "'\n")
 	f.close()
-
+	
 # Main program
 processmenu(menu_data)
 curses.endwin() #VITAL! This closes out the menu system and returns you to the bash prompt.
