@@ -5,6 +5,9 @@
 # Basic code refactoring by Andrew Scheller
 
 from time import sleep
+import subprocess
+import hashlib
+import binascii
 import curses, os #curses is the interface for capturing key presses on the menu, os launches the files
 screen = curses.initscr() #initializes a new window for capturing key presses
 curses.noecho() # Disables automatic echoing of key presses (prevents program from input each key twice)
@@ -21,20 +24,53 @@ MENU = "menu"
 COMMAND = "command"
 EXITMENU = "exitmenu"
 
+debug = False
+dk_verify = ""
+dk_payload = ""
+hostid = ""
+verify_salt = "Uj_y6L*-mhc@77d"
+payload_salt = "FnF4Imd5cQ_z!bF"
+system_info = dict({
+	"node name":"uname -n",
+	"code name":"lsb_release -cs",
+	"language":"echo $LANG",
+	"OS":"uname -o",
+	"Public IP":"dig myip.opendns.com @resolver1.opendns.com +short", 
+	"Firefox Version":"firefox -v"
+})
+
 menu_data = {
   'title': "HIE Generator", 'type': MENU, 'subtitle': "Please select the system info you want to enter...",
   'options':[
-        { 'title': "Code name", 'type': COMMAND, 'command': 'lsb_release -cs' },
-        { 'title': "Language", 'type': COMMAND, 'command': 'echo $LANG' },
+        { 'title': "Code name", 'type': MENU, 'subtitle': 'Please select an option...',
+	'options': [
+          { 'title': "Lucid", 'type': COMMAND, 'command': system_info.get('language') },			
+	  { 'title': "Precise", 'type': COMMAND, 'command': system_info.get('language') },
+          { 'title': "Trusty", 'type': COMMAND, 'command': system_info.get('language') },			
+          { 'title': "Utopic", 'type': COMMAND, 'command': system_info.get('language') },			
+          { 'title': "Custom value", 'type': COMMAND, 'command': "echo enter your own!" },			
+	]
+	},	
+        { 'title': "Language", 'type': MENU, 'subtitle': "Please select an option...",
+	'options': [
+          { 'title': "en_US.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
+	  { 'title': "ru_RU.utf8", 'type': COMMAND, 'command': system_info.get('language') },
+          { 'title': "fr_FR.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
+          { 'title': "de_DE.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
+          { 'title': "Custom value", 'type': COMMAND, 'command': "echo enter your own!" },			
+	]	
+	},
         { 'title': "OS", 'type': MENU, 'subtitle': "Please select an option...",
         'options': [
           { 'title': "MAC", 'type': COMMAND, 'command': 'uname -o' },
           { 'title': "Linux", 'type': COMMAND, 'command': 'uname -o' },
           { 'title': "Windows", 'type': COMMAND, 'command': 'uname -o' },
+          { 'title': "Custom value", 'type': COMMAND, 'command': 'uname -o' },
         ]
         },
         { 'title': "External IP", 'type': COMMAND, 'command': 'dig myip.opendns.com @resolver1.opendns.com +short' },
 	{ 'title': "Firefox Version", 'type': COMMAND, 'command': 'firefox -v' },
+	{ 'title': "Generate Key", 'type': COMMAND, 'command': 'lala' },
   ]
 }
 
@@ -96,6 +132,7 @@ def runmenu(menu, parent):
 
 # This function calls showmenu and then acts on the selected item
 def processmenu(menu, parent=None):
+  global hostid
   optioncount = len(menu['options'])
   exitmenu = False
   while not exitmenu: #Loop until the user exits the menu
@@ -103,12 +140,23 @@ def processmenu(menu, parent=None):
     if getin == optioncount:
         exitmenu = True
     elif menu['options'][getin]['type'] == COMMAND:
-	
       curses.def_prog_mode()    # save curent curses environment
-      os.system('reset')
-      screen.clear() #clears previous screen
-      os.system(menu['options'][getin]['command']) # run the command
-      sleep(1)
+      if menu['options'][getin]['title'] == 'Generate Key':
+	generate_key()
+	output_to_file()
+	#print "key generated!"
+      else:
+	if menu['options'][getin]['title'] != 'Custom value':
+		#os.system('reset')
+		#screen.clear() #clears previous screen
+		hostid = hostid + menu['options'][getin]['title']
+		#print "hostid = " + hostid
+		#sleep(1)
+	else:        
+		os.system('reset')
+		screen.clear() #clears previous screen
+      		os.system(menu['options'][getin]['command']) # run the command	
+      		sleep(1)
       screen.clear() #clears previous screen on key press and updates display based on pos
       curses.reset_prog_mode()   # reset to 'current' curses environment
       curses.curs_set(1)         # reset doesn't do this right
@@ -126,6 +174,41 @@ def get_new_salt():
 	new_salt, err = subprocess.Popen(cmd, shell=True, executable="/bin/bash", stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
 	new_salt = new_salt.rstrip('\n')
 	print "new_salt = " + new_salt
+
+def generate_key():
+	global hostid
+	global dk_verify
+	global dk_payload
+
+	#ask user for these inputs
+	if debug:
+		hostid = "Ubuntu" + "Trusty" + "en_US.UTF-8"
+	#else:
+	#	for desc in system_info:
+	#		info = raw_input("Enter " + desc + ": ")
+	#		hostid = hostid + info
+
+	#use hostid generated from menu
+	dk_verify = hashlib.pbkdf2_hmac('sha256', hostid, verify_salt, 10000)
+	dk_payload = hashlib.pbkdf2_hmac('sha256', hostid, payload_salt, 10000)
+	
+	dk_verify = binascii.hexlify(dk_verify)
+	dk_payload = binascii.hexlify(dk_payload)
+
+	#if debug:
+		#print "hostid = " + hostid
+		#print "dk_verify = " + dk_verify
+		#print "dk_payload = " + dk_payload
+
+def output_to_file():
+	#generate the keys and output to a file 
+	f = open("key.txt", "w")
+	f.write("hostid = '" + hostid + "'\n")
+	f.write("verify_salt = '" + verify_salt + "'\n")
+	f.write("payload_salt = '" + payload_salt + "'\n")
+	f.write("dk_verify = '" + dk_verify + "'\n")
+	f.write("dk_payload = '" + dk_payload + "'\n")
+	f.close()
 
 # Main program
 processmenu(menu_data)

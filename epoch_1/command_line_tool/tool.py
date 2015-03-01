@@ -13,7 +13,8 @@ system_info = dict({
 	"code name":"lsb_release -cs",
 	"language":"echo $LANG",
 	"OS":"uname -o",
-	"Public IP":"dig myip.opendns.com @resolver1.opendns.com +short"
+	"Public IP":"dig myip.opendns.com @resolver1.opendns.com +short", 
+	"Firefox Version":"firefox -v"
 })
 
 def get_new_salt():

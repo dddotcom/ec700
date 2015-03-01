@@ -1,5 +1,5 @@
-hostid = 'UbuntuTrustyeng'
+hostid = 'Utopicde_DE.utf8MAC'
 verify_salt = 'Uj_y6L*-mhc@77d'
 payload_salt = 'FnF4Imd5cQ_z!bF'
-dk_verify = '82b3081558dabf5306ca2fcf421afed567da612c5b197a4159dd756ca8c71a98'
-dk_payload = '32f7ddbbb3047df283b1920bf3bbbde80230cdec9b7f6825169e20293f825fea'
+dk_verify = '47b9480dd5e012ef8e3209941ccb09db9ad2cf57b47f3c948666760989cb199f'
+dk_payload = 'f2f0747a7242d493c38534e1ba80e1e5a22681da0077ee0fbb6fff2a90a71275'
