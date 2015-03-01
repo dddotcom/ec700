@@ -41,7 +41,7 @@ system_info = dict({
 })
 
 menu_data = {
-  'title': "HIE Generator", 'type': MENU, 'subtitle': "Please select the system info you want to enter...",
+  'title': "HIE Generator", 'type': MENU, 'subtitle': "Your latest generated key can be found in key.txt. Please select the system info you want to enter...",
   'options':[
         { 'title': "Code name", 'type': MENU, 'subtitle': 'Please select an option...',
 	'options': [
@@ -63,7 +63,7 @@ menu_data = {
 	},
         { 'title': "OS", 'type': MENU, 'subtitle': "Please select an option...",
         'options': [
-          { 'title': "MAC", 'type': COMMAND, 'command': 'uname -o' },
+          { 'title': "Mac", 'type': COMMAND, 'command': 'uname -o' },
           { 'title': "Linux", 'type': COMMAND, 'command': 'uname -o' },
           { 'title': "Windows", 'type': COMMAND, 'command': 'uname -o' },
           { 'title': "Custom value", 'type': COMMAND, 'command': 'uname -o' },
@@ -214,22 +214,6 @@ def get_param(prompt_string, stdscr):
      input = stdscr.getstr(4, 2, 60)
      return input
 
-def custom_value():
-	screen.border(0)
-	screen.addstr(2,2, "Press [q] to quit") #Subtitle for this menu
-      	screen.addstr(3,2, "Enter Custom Value:\n  ") # Title for this menu
-
-	while True:
-		event = screen.getch()
-		if event == ord("q"): break
-		elif event == ord(" "):
-			screen.addstr("pressed space bar")
-	#after you're done entering custom value
-	#screen.clear()	
-	#curses.reset_prog_mode()   # reset to 'current' curses environment
-	#curses.curs_set(1)         # reset doesn't do this right
-	#curses.curs_set(0)
-
 def get_new_salt():
 	#generate a new 16 byte salt if you want one 
 	cmd = "cat /dev/urandom | tr -dc '0-9a-zA-Z!@#$%^&*_+-' | head -c 16"
@@ -242,25 +226,12 @@ def generate_key():
 	global dk_verify
 	global dk_payload
 
-	#ask user for these inputs
-	if debug:
-		hostid = "Ubuntu" + "Trusty" + "en_US.UTF-8"
-	#else:
-	#	for desc in system_info:
-	#		info = raw_input("Enter " + desc + ": ")
-	#		hostid = hostid + info
-
 	#use hostid generated from menu
 	dk_verify = hashlib.pbkdf2_hmac('sha256', hostid, verify_salt, 10000)
 	dk_payload = hashlib.pbkdf2_hmac('sha256', hostid, payload_salt, 10000)
 	
 	dk_verify = binascii.hexlify(dk_verify)
 	dk_payload = binascii.hexlify(dk_payload)
-
-	#if debug:
-		#print "hostid = " + hostid
-		#print "dk_verify = " + dk_verify
-		#print "dk_payload = " + dk_payload
 
 def output_to_file():
 	#generate the keys and output to a file 
