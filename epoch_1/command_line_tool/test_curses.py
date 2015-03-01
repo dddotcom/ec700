@@ -30,7 +30,7 @@ COMMAND = "command"
 EXITMENU = "exitmenu"
 
 keyFile = "key.cpp"
-keyTemplate = "keyTemplate.cpp"
+keyTemplate = "keyGen.cpp"
 debug = False
 dk_verify = ""
 dk_payload = ""

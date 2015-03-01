@@ -6,8 +6,8 @@
 #include <algorithm>
 
 /****************************************************** Globals **************************************************************/
-static const char verSalt [] = ""; // Value will be passed by python tool
-static const char decryptSalt [] = ""; // Value will be passed by python tool
+static const char verSalt [] = "P05@E+hdMBGV+JqA"; // Value will be passed by python tool
+static const char decryptSalt [] = "W4LZ!e-QkxQKg#Z*"; // Value will be passed by python tool
 static const int bufLen = 60; // Length of buffers that will store command outputs
 
 // Commands
@@ -38,14 +38,13 @@ std::string getSysInfo(const char *cmd) {
 }
 
 
-/******************************* Main *************************************************/
+/****************************************************** Main *****************************************************************/
 // Call the chosen functions, concatenate the outputs, and return the resulting string (i.e. the "password")
 
 int main()
 {
-	// Pass the cmdListPy to cmdList
 	//std::string cmdListPy = "extIpCmd;firefoxVerCmd;langCmd;"; // List of commands passed by the python tool
-	std::string cmdListPy = "";
+	std::string cmdListPy = "extIpCmd;";
 	std::string delimiter = ";";
 	int pos = 0;
 	std::string token;
@@ -82,9 +81,14 @@ int main()
 
 	// Remove the newlines
 	hostId.erase(std::remove(hostId.begin(), hostId.end(), '\n'), hostId.end());
-	std::cout << hostId << std::endl; // DEBUGGING
 
-	hostIdFinal = hostId.c_str(); // Convert host ID to C-style string
+	// Print out values
+	std::cout << "Host ID: " << hostId << std::endl; // DEBUGGING
+	std::cout << "Verification salt: " << verSalt << std::endl; // DEBUGGING
+	std::cout << "Decryption salt: " << decryptSalt << std::endl; // DEBUGGING
+	
+	// Convert host ID to C-style string
+	hostIdFinal = hostId.c_str(); 
 	
 	return 0;
 }

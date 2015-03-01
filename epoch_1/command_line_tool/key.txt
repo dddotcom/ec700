@@ -1,0 +1,5 @@
+hostid = '1.2.3.4'
+verify_salt = 'P05@E+hdMBGV+JqA'
+payload_salt = 'W4LZ!e-QkxQKg#Z*'
+dk_verify = '7e349f23e874a546c0933a8c94cf7543198778e1e78898129b440338965714a9'
+dk_payload = 'e859d9474f1cd92fd5488a3dd95c18b3e7615cc54b1335beab6543f98c97f200'
