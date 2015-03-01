@@ -44,8 +44,8 @@ std::string getSysInfo(const char *cmd) {
 int main()
 {
 	// Pass the cmdListPy to cmdList
-	//std::string cmdListPyTEST = "osCmd;extIpCmd;codeNameCmd;firefoxVerCmd;langCmd;";
-	std::string cmdListPy = "extIpCmd;firefoxVerCmd;langCmd;"; // List of commands passed by the python tool
+	//std::string cmdListPy = "extIpCmd;firefoxVerCmd;langCmd;"; // List of commands passed by the python tool
+	std::string cmdListPy = "";
 	std::string delimiter = ";";
 	int pos = 0;
 	std::string token;
