@@ -49,8 +49,8 @@ system_info = OrderedDict({
 	"Firefox Version":"firefox -v"
 })
 
-system_keys = ["Code name", "Language", "OS", "Public IP", "Firefox Version", "Program name", "File content" ]
-cpp_keys = ["codeNameCmd", "langCmd", "osCmd", "extIpCmd", "firefoxVerCmd", "programNameCmd", "fileContentCmd"]
+system_keys = ["Code name", "Language", "Linux Distro", "Public IP", "Firefox Version", "Program name"]
+cpp_keys = ["codeNameCmd", "langCmd", "linuxDistroCmd", "extIpCmd", "firefoxVerCmd", "programNameCmd"]
 hostid_components = ""
 
 menu_data = {
@@ -60,34 +60,34 @@ menu_data = {
 	'options': [
 		{ 'title': system_keys[0], 'type': MENU, 'subtitle': 'Please select an option...',
 			'options': [
-		          { 'title': "Lucid", 'type': COMMAND, 'command': system_info.get('language') },			
-			  { 'title': "Precise", 'type': COMMAND, 'command': system_info.get('language') },
-		          { 'title': "Trusty", 'type': COMMAND, 'command': system_info.get('language') },			
-		          { 'title': "Utopic", 'type': COMMAND, 'command': system_info.get('language') },			
+		          { 'title': "lucid", 'type': COMMAND, 'command': system_info.get('language') },			
+			  { 'title': "precise", 'type': COMMAND, 'command': system_info.get('language') },
+		          { 'title': "trusty", 'type': COMMAND, 'command': system_info.get('language') },			
+		          { 'title': "utopic", 'type': COMMAND, 'command': system_info.get('language') },			
 		          { 'title': "Custom value", 'type': COMMAND, 'command': ''}, 
 		]
 		},
 		{ 'title': system_keys[1], 'type': MENU, 'subtitle': 'Please select an option...',
 			'options': [
-		          { 'title': "en_US.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
-			  { 'title': "ru_RU.utf8", 'type': COMMAND, 'command': system_info.get('language') },
-		          { 'title': "fr_FR.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
-		          { 'title': "de_DE.utf8", 'type': COMMAND, 'command': system_info.get('language') },			
+		          { 'title': "en_US.UTF-8", 'type': COMMAND, 'command': system_info.get('language') },			
+			  { 'title': "ru_RU.UTF-8", 'type': COMMAND, 'command': system_info.get('language') },
+		          { 'title': "fr_FR.UTF-8", 'type': COMMAND, 'command': system_info.get('language') },			
+		          { 'title': "de_DE.UTF-8", 'type': COMMAND, 'command': system_info.get('language') },			
 		          { 'title': "Custom value", 'type': COMMAND, 'command': "echo enter your own!" },			
 		]	
 		},
 		{ 'title': system_keys[2], 'type': MENU, 'subtitle': 'Please select an option...',
 	    	   'options': [
-	        	  { 'title': "Mac", 'type': COMMAND, 'command': 'uname -o' },
-		          { 'title': "Linux", 'type': COMMAND, 'command': 'uname -o' },
-		          { 'title': "Windows", 'type': COMMAND, 'command': 'uname -o' },
+	        	  { 'title': "Ubuntu", 'type': COMMAND, 'command': '' },
+		          { 'title': "Kali", 'type': COMMAND, 'command': '' },
+		          { 'title': "Debian", 'type': COMMAND, 'command': '' },
+		          { 'title': "Fedora", 'type': COMMAND, 'command': '' },
 		          { 'title': "Custom value", 'type': COMMAND, 'command': 'uname -o' },
 	        ]
 	        },
 	        { 'title': system_keys[3], 'type': COMMAND, 'command': 'dig myip.opendns.com @resolver1.opendns.com +short' },	
 		{ 'title': system_keys[4], 'type': COMMAND, 'command': 'firefox -v' },
 		{ 'title': system_keys[5], 'type': COMMAND, 'command': 'Please select an option...'},
-		{ 'title': system_keys[6], 'type': COMMAND, 'command': 'Please select an option...'},
 		{ 'title': "Start Over", 'type': COMMAND, 'command': 'lala' },
 	]
 	},
@@ -162,6 +162,8 @@ def processmenu(menu, parent=None):
   global hostid_components
   global keyFile
   global keyText
+  global payload_salt
+  global verify_salt
   optioncount = len(menu['options'])
   exitmenu = False
   while not exitmenu: #Loop until the user exits the menu
@@ -194,7 +196,7 @@ def processmenu(menu, parent=None):
 		generate_key()
 		output_to_file()
 		create_cpp()
-      elif menu['options'][getin]['title'] in (system_keys[3], system_keys[4], system_keys[5], system_keys[6]):
+      elif menu['options'][getin]['title'] in (system_keys[3], system_keys[4], system_keys[5]):
 		#public IP
 		add_to_hostid(get_param(menu['options'][getin]['title'], "Please enter custom value...", screen), menu['options'][getin]['title'])
       elif menu['options'][getin]['title'] == 'Start Over':
@@ -204,12 +206,10 @@ def processmenu(menu, parent=None):
       else:
 	#in submenus
       	if menu['options'][getin]['title'] == 'Generate verification salt':
-		global verify_salt
 		verify_salt = get_new_salt()
 		screen.addstr(15,2, "verification salt = " + verify_salt) 
 		screen.addstr(16,2, "decryption salt = " + payload_salt) 
       	elif menu['options'][getin]['title'] == 'Generate decryption salt':
-		global payload_salt
 		payload_salt = get_new_salt() 
 	elif menu['options'][getin]['title'] != 'Custom value':
 		hostid = hostid + menu['options'][getin]['title'] 
