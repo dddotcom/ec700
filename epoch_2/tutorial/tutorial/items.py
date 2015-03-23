@@ -22,9 +22,14 @@ class MetacriticItem(scrapy.Item):
 	date = scrapy.Field()
 	desc = scrapy.Field()
 
-#my attempt
+#my attempts
 class FinalFantasyItem(scrapy.Item):
 	job = scrapy.Field()
 	role = scrapy.Field()
 	requirements = scrapy.Field()
 	lore = scrapy.Field()
+
+class GoogleItem(scrapy.Item):
+	title = scrapy.Field()
+	link = scrapy.Field()
+	desc = scrapy.Field()
