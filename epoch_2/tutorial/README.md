@@ -1,6 +1,6 @@
-##Testing out Scapy 
+##Testing out Scrapy 
 
-To try any of the 3 implemented web spiders in the Scapy project directory `tutorial` run: 
+To try any of the 3 implemented web spiders in the Scrapy project directory `tutorial` run: 
 ```
 scrapy crawl dmoz
 scrapy crawl ff
