@@ -5,6 +5,10 @@ from pprint import pprint
 from tutorial.items import GoogleItem
 
 login_pages = []
+facebook_signin = "https://www.google.com/search?q=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&oq=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&num=100&start=300&aqs=chrome..69i57.987j0j1&sourceid=chrome&es_sm=93&ie=UTF-8"
+google_signin = "https://www.google.com/search?q=sign+in+with+google+inurl%3A%2Fsignin%2F+-site%3Agoogle.com+-site%3Agithub.com+-site%3Astackoverflow.com&oq=sign+in+with+google+inurl%3A%2Fsignin%2F+-site%3Agoogle.com+-site%3Agithub.com+-site%3Astackoverflow.com&num=100&start=100&aqs=chrome..69i57.2198j0j9&sourceid=chrome&es_sm=93&ie=UTF-8"
+
+twitter_login = "https://www.google.com/search?q=%22with+twitter%22+inurl%3A%22%2Flogin%22+-site%3Atwitter.com&oq=%22with+twitter%22+inurl%3A%22%2Flogin%22+-site%3Atwitter.com&num=100&start=100&aqs=chrome..69i57.275j0j1&sourceid=chrome&es_sm=93&ie=UTF-8#q=%22with+twitter%22+inurl:%22%2Flogin%22+-site:twitter.com"
 
 def find_login_pages():
 	with open('out.json') as data_file:    
@@ -36,5 +40,24 @@ def generate_unique_url_list():
 
 	f = open('final_check_these_sites.txt','w')
 	for url in unique_urls:
-		f.write(url + '\n') # python will convert \n to os.linesep
+		f.write(url + '\n')
 	f.close()
+
+def get_many_results():
+	num_sites = 1000
+	start_urls = []
+	for i in range(num_sites/100):
+		new_url = "https://www.google.com/search?q=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&oq=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&num=100&start=" + str(i*100) + "&aqs=chrome..69i57.987j0j1&sourceid=chrome&es_sm=93&ie=UTF-8"
+		start_urls.append(new_url)
+	
+	f = open('generated_urls.txt','w')
+	f.write("start_urls = [" + "\n")
+	for url in start_urls:
+		if url == start_urls[-1]:
+			f.write('\t"' + url + '"\n')
+		else:
+			f.write('\t"' + url + '",\n')
+	f.write("]")
+	f.close()
+
+get_many_results()
