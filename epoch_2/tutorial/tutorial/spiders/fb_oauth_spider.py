@@ -3,7 +3,7 @@ from pprint import pprint
 from tutorial.items import GoogleItem
 
 class OauthSpider(scrapy.Spider):
-	name = "facebook"
+	name = "fb_oauth"
 	start_urls = []
 	with open("check_these_sites.txt", "r") as f:	
 		for line in f.read().splitlines():

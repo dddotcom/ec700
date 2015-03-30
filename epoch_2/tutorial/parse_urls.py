@@ -41,9 +41,9 @@ def get_start_urls():
 	f.close()
 	print array
 
-def generate_unique_url_list():
+def generate_unique_url_list(json_file):
 	unique_urls = set()
-	with open('oauth_sites.json') as data_file:    
+	with open(json_file) as data_file:    
 	    data = json.load(data_file)
 	for d in data:
 		unique_urls.add(str(d["link"]))
