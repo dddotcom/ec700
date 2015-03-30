@@ -4,28 +4,17 @@ from tutorial.items import GoogleItem
 
 class OauthSpider(scrapy.Spider):
 	name = "oauth"
-	start_urls = []
-	with open("check_these_sites.txt", "r") as f:	
-		for line in f.read().splitlines():
-			start_urls.append(line)
-	f.close()
-	print start_urls
+	#start_urls = []
+	#with open("check_these_sites.txt", "r") as f:	
+	#	for line in f.read().splitlines():
+	#		start_urls.append(line)
+	#f.close()
+	#print start_urls
 
-	# start_urls = [
+	start_urls = ['http://ask.fm/login']
 	# 	'https://www.pinterest.com/login/',
 	# 	'https://hootsuite.com/login',
-	# 	'http://ask.fm/login'
-	# 	]
 
-	def find_login_pages():
-		with open('out.json') as data_file:    
-		    data = json.load(data_file)
-		for d in data:
-			if "/login&sa=" in str(d["link"]) or "/login/&sa=" in str(d["link"]):
-				#pprint(d["title"])
-				#search through url
-				#pprint(str(d["link"]).split("/url?q=")[1])	
-				start_urls.append(re.search("(?P<url>https?://[^\s]+)", str(d["link"])).group("url").split("&sa=")[0])
 
 	def parse(self, response):
 
