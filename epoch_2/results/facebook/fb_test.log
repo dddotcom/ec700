@@ -1,0 +1,746 @@
+2015-04-01 10:54:45-0400 [scrapy] INFO: Scrapy 0.24.5 started (bot: tutorial)
+2015-04-01 10:54:45-0400 [scrapy] INFO: Optional features available: ssl, http11
+2015-04-01 10:54:45-0400 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'tutorial.spiders', 'FEED_URI': '../results/fb_test.json', 'SPIDER_MODULES': ['tutorial.spiders'], 'BOT_NAME': 'tutorial', 'FEED_FORMAT': 'json', 'LOG_FILE': '../results/fb_test.log'}
+2015-04-01 10:54:45-0400 [scrapy] INFO: Enabled extensions: FeedExporter, LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-04-01 10:54:45-0400 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-04-01 10:54:45-0400 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-04-01 10:54:45-0400 [scrapy] INFO: Enabled item pipelines: 
+2015-04-01 10:54:45-0400 [fb_oauth] INFO: Spider opened
+2015-04-01 10:54:45-0400 [fb_oauth] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-04-01 10:54:45-0400 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2015-04-01 10:54:45-0400 [scrapy] DEBUG: Web service listening on 127.0.0.1:6080
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://secure.hulu.com/account/signin> from <GET http://www.hulu.com/account/signin>
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://www.bing.com/rewards/signin> from <GET http://www.bing.com/rewards/signin>
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://badoo.com/signin/> (referer: None)
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Retrying <GET https://www.coursera.org/account/signin> (failed 1 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Scraped from <200 http://badoo.com/signin/>
+	{'desc': '//div/span/text()',
+	 'link': 'http://badoo.com/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://socialclub.rockstargames.com/profile/signin> (referer: None)
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.caringbridge.org/signin> from <GET http://www.caringbridge.org/signin>
+2015-04-01 10:54:45-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://zoom.us/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://app.groupme.com/signin> (referer: None) ['partial']
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://zoom.us/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://zoom.us/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Retrying <GET https://www.coursera.org/account/signin> (failed 2 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Gave up retrying <GET https://www.coursera.org/account/signin> (failed 3 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 10:54:46-0400 [fb_oauth] ERROR: Error downloading <GET https://www.coursera.org/account/signin>: [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.bing.com/rewards/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://imgur.com/signin> from <GET http://imgur.com/signin>
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.bing.com/rewards/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'https://www.bing.com/rewards/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://myspace.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.etsy.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://myspace.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://myspace.com/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.starbucks.com/account/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.hsn.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://pogoplug.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.coinbase.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.etsy.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.etsy.com/signin',
+	 'title': [u'\n            Sign In with Facebook\n        ']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.starbucks.com/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.starbucks.com/account/signin',
+	 'title': [u'Login with Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.hsn.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.hsn.com/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://pogoplug.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://pogoplug.com/signin',
+	 'title': [u'Sign up with Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.coinbase.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.coinbase.com/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://secure.hulu.com/account/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://secure.hulu.com/account/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'https://secure.hulu.com/account/signin',
+	 'title': [u'Login with your Facebook ID.']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.punchbowl.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.caringbridge.org/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.punchbowl.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://www.punchbowl.com/signin',
+	 'title': [u' Sign in with Facebook']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://developer.ebay.com/base/membership/signin/> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.qobuz.com/signin> (referer: None)
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.caringbridge.org/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.caringbridge.org/signin',
+	 'title': [u'\n                        ',
+	           u'\n                        Facebook                    ']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.qobuz.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://www.qobuz.com/signin',
+	 'title': [u'                        Become a fan on Facebook                                           ']}
+2015-04-01 10:54:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://imgur.com/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://mcent.com/signin/> from <GET https://mcent.com/signin>
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://mcent.com/signin/> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Scraped from <200 https://mcent.com/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'https://mcent.com/signin/',
+	 'title': [u'Facebook', u'Twitter']}
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.cleartrip.com/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.cleartrip.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.cleartrip.com/signin',
+	 'title': [u'Log in with Facebook']}
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.rdio.com/account/signin/> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.rogers.com/web/resources/service/residentialRedirect.jsp?setLanguage=en&setProvince=ON&customer_type=Residential&targetUrl=%2Fweb%2Flink%2Fsignin> from <GET https://www.rogers.com/web/link/signin>
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.mealtrain.com/account/signin/> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.mealtrain.com/account/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://www.mealtrain.com/account/signin/',
+	 'title': [u'\xa0Become a fan on Facebook']}
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.lotsahelpinghands.com/signin/> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://cacoo.com/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Scraped from <200 https://cacoo.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://cacoo.com/signin',
+	 'title': [u'Nulab Account', u'Google', u'Facebook', u'Twitter']}
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://im.chikka.com/v5/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.rogers.com/web/resources/service/residentialRedirect.jsp?setLanguage=en&setProvince=ON&customer_type=Residential&targetUrl=%2Fweb%2Flink%2Fsignin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Scraped from <200 https://im.chikka.com/v5/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://im.chikka.com/v5/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://ordering.ftd.com/signin/> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.expedia.com/user/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.easports.com/signin-redirect> from <GET https://www.easports.com/signin>
+2015-04-01 10:54:47-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.buzzfeed.com/signin> (referer: None)
+2015-04-01 10:54:47-0400 [fb_oauth] ERROR: Spider error processing <GET https://www.expedia.com/user/signin>
+	Traceback (most recent call last):
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/task.py", line 638, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/usr/lib/pymodules/python2.7/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/usr/lib/pymodules/python2.7/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield next(it)
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/offsite.py", line 26, in process_spider_output
+	    for x in result:
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/home/ddortega/Desktop/ec700/epoch_2/tutorial/tutorial/spiders/fb_oauth_spider.py", line 41, in parse
+	    yield self.saveSite(esult.xpath('span/text()').extract(), response.url, "//button/span/text()")
+	exceptions.NameError: global name 'esult' is not defined
+	
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.buzzfeed.com/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'http://www.buzzfeed.com/signin',
+	 'title': [u'Signing up with Facebook is fast and easy, and means one less password to remember.']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.thefa.com/account/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.thefa.com/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.thefa.com/account/signin',
+	 'title': [u'England Facebook Page']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://accounts.ea.com/connect/auth?response_type=code&client_id=EASPORTS-DOT-COM-Web-Client&state=b5696d1cb1d01f70146271ad581be21ab1ddf6b5&redirect_uri=http%3A%2F%2Fwww.easports.com%2Fsignin_check&locale=us&scope=basic.identity+basic.persona+offline+basic.domaindata+basic.utility+basic.identity.write> from <GET https://www.easports.com/signin-redirect>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://www.mesmeride.com/auth/strava> from <GET http://www.mesmeride.com/signin>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.strava.com/oauth/authorize?response_type=code&client_id=81&redirect_uri=http%3A%2F%2Fwww.mesmeride.com%2Fauth%2Fstrava%2Fcallback&state=85708d38b49f6935e3d4bdd91a15e7195e48c36c4252d635&approval_prompt=auto> from <GET http://www.mesmeride.com/auth/strava>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://secure.coursesmart.com/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://signin.ea.com/p/web/login?fid=FlbSWeuDQZQ4JnowKDtZtlxwewEFVYs> from <GET https://accounts.ea.com/connect/auth?response_type=code&client_id=EASPORTS-DOT-COM-Web-Client&state=b5696d1cb1d01f70146271ad581be21ab1ddf6b5&redirect_uri=http%3A%2F%2Fwww.easports.com%2Fsignin_check&locale=us&scope=basic.identity+basic.persona+offline+basic.domaindata+basic.utility+basic.identity.write>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://elmers.com/account/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 http://elmers.com/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://elmers.com/account/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.strava.com/login> from <GET https://www.strava.com/oauth/authorize?response_type=code&client_id=81&redirect_uri=http%3A%2F%2Fwww.mesmeride.com%2Fauth%2Fstrava%2Fcallback&state=85708d38b49f6935e3d4bdd91a15e7195e48c36c4252d635&approval_prompt=auto>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://signin.ea.com/p/web/login?execution=e1114547634s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Fscope%3Dbasic.identity%2Bbasic.persona%2Boffline%2Bbasic.domaindata%2Bbasic.utility%2Bbasic.identity.write%26redirect_uri%3Dhttp%253A%252F%252Fwww.easports.com%252Fsignin_check%26locale%3Dus%26state%3Db5696d1cb1d01f70146271ad581be21ab1ddf6b5%26response_type%3Dcode%26client_id%3DEASPORTS-DOT-COM-Web-Client> from <GET https://signin.ea.com/p/web/login?fid=FlbSWeuDQZQ4JnowKDtZtlxwewEFVYs>
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://blyve.com/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.strava.com/login> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://trueandco.com/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://signin.ea.com/p/web/login?execution=e1114547634s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Fscope%3Dbasic.identity%2Bbasic.persona%2Boffline%2Bbasic.domaindata%2Bbasic.utility%2Bbasic.identity.write%26redirect_uri%3Dhttp%253A%252F%252Fwww.easports.com%252Fsignin_check%26locale%3Dus%26state%3Db5696d1cb1d01f70146271ad581be21ab1ddf6b5%26response_type%3Dcode%26client_id%3DEASPORTS-DOT-COM-Web-Client> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.strava.com/login>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.strava.com/login',
+	 'title': [u'\nLog in using Facebook\n']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (404) <GET https://w.bb2pc.com/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 https://signin.ea.com/p/web/login?execution=e1114547634s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Fscope%3Dbasic.identity%2Bbasic.persona%2Boffline%2Bbasic.domaindata%2Bbasic.utility%2Bbasic.identity.write%26redirect_uri%3Dhttp%253A%252F%252Fwww.easports.com%252Fsignin_check%26locale%3Dus%26state%3Db5696d1cb1d01f70146271ad581be21ab1ddf6b5%26response_type%3Dcode%26client_id%3DEASPORTS-DOT-COM-Web-Client>
+	{'desc': '//div/span/text()',
+	 'link': 'https://signin.ea.com/p/web/login?execution=e1114547634s1&initref=https%3A%2F%2Faccounts.ea.com%3A443%2Fconnect%2Fauth%3Fscope%3Dbasic.identity%2Bbasic.persona%2Boffline%2Bbasic.domaindata%2Bbasic.utility%2Bbasic.identity.write%26redirect_uri%3Dhttp%253A%252F%252Fwww.easports.com%252Fsignin_check%26locale%3Dus%26state%3Db5696d1cb1d01f70146271ad581be21ab1ddf6b5%26response_type%3Dcode%26client_id%3DEASPORTS-DOT-COM-Web-Client',
+	 'title': [u'Your Email or Password is incorrect. Please try again.',
+	           u'Application not Authorized.',
+	           u'Not logged in to Facebook',
+	           u'Missing email',
+	           u'Missing password',
+	           u'Email address is invalid']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Ignoring response <404 https://w.bb2pc.com/signin>: HTTP status code is not handled or not allowed
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.ourdeal.com.au/signin> (referer: None)
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.ourdeal.com.au/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.ourdeal.com.au/signin',
+	 'title': [u'\n\t\t', u' Sign in with Facebook']}
+2015-04-01 10:54:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://eu.wargaming.net/id/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.americasgottalentauditions.com/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.airdroid.com/en/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.americasgottalentauditions.com/signin/>
+	{'desc': '//a/text()',
+	 'link': 'http://www.americasgottalentauditions.com/signin/',
+	 'title': [u'Follow us on Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.dailymotion.com/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.projectnoah.org/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://stocktwits.com/signin> from <GET http://stocktwits.com/signin>
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.dailymotion.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.dailymotion.com/signin',
+	 'title': [u'Sign In with Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.genesreunited.co.uk/account/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://ring.to/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.typepad.com/services/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 https://ring.to/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'https://ring.to/signin/',
+	 'title': [u'Sign In using Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.zeropc.com/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.zeropc.com/signin/>
+	{'desc': '//a/text()',
+	 'link': 'https://www.zeropc.com/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://strikewithme.org/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://strikewithme.org/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://strikewithme.org/signin/',
+	 'title': [u'\n                                    Log in with Facebook ',
+	           u'\n                                ']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://m.axs.com/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://m.axs.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://m.axs.com/signin',
+	 'title': [u'Sign up with Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.zimride.com/auth/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.zimride.com/auth/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.zimride.com/auth/signin',
+	 'title': [u'Log in with Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.dingaling.com/customer/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.youneedmyguy.com/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://connect.garmin.com/en-US/signin> from <GET https://connect.garmin.com/signin>
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.youneedmyguy.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://www.youneedmyguy.com/signin',
+	 'title': [u'\n                ',
+	           u'\n                Sign in with Facebook\n            ',
+	           u'\n                ',
+	           u'\n                Sign in with Twitter\n            ',
+	           u'\n                ',
+	           u'\n                Sign in with LinkedIn\n            ']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.23andme.com/user/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://edgartells.me/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.23andme.com/user/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.23andme.com/user/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.sparked.com/signin> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.tvguide.com/signin/> (referer: None)
+2015-04-01 10:54:49-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.tvguide.com/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.tvguide.com/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://stocktwits.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://connect.garmin.com/en-US/signin> from <GET http://connect.garmin.com/en-US/signin>
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://stocktwits.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://stocktwits.com/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://connect.garmin.com/en-US/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.certilogo.com/registration/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.girlsaskguys.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://youpic.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://connect.garmin.com/en-US/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://connect.garmin.com/en-US/signin',
+	 'title': [u'Help',
+	           u'Facebook',
+	           u'Twitter',
+	           u'Statement of Privacy',
+	           u'Terms of Use',
+	           u'Status']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://cerego.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://youpic.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://youpic.com/signin',
+	 'title': [u'Terms',
+	           u'About',
+	           u'\n\t        Facebook page',
+	           u'Blog',
+	           u'Photographers']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://cerego.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://cerego.com/signin',
+	 'title': [u'Sign up with Facebook', u'Sign up with Twitter']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.nybooks.com/account/signin/> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://chartbeat.com/signin/> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.housetrip.com/en/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.nybooks.com/account/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.nybooks.com/account/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://chartbeat.com/signin/>
+	{'desc': '//a/text()',
+	 'link': 'https://chartbeat.com/signin/',
+	 'title': [u'Chartbeat Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.housetrip.com/en/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.housetrip.com/en/signin',
+	 'title': [u'Sign in using Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.transifex.com/signin/> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.transifex.com/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.transifex.com/signin/',
+	 'title': [u'github', u'google', u'linkedin', u'Facebook', u'Twitter']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://dictionary.reference.com/browse/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.tapingo.com/signin/> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 http://dictionary.reference.com/browse/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://dictionary.reference.com/browse/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] ERROR: Spider error processing <GET https://www.tapingo.com/signin/>
+	Traceback (most recent call last):
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/task.py", line 638, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/usr/lib/python2.7/dist-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/usr/lib/pymodules/python2.7/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/usr/lib/pymodules/python2.7/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield next(it)
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/offsite.py", line 26, in process_spider_output
+	    for x in result:
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/usr/lib/pymodules/python2.7/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/home/ddortega/Desktop/ec700/epoch_2/tutorial/tutorial/spiders/fb_oauth_spider.py", line 41, in parse
+	    yield self.saveSite(esult.xpath('span/text()').extract(), response.url, "//button/span/text()")
+	exceptions.NameError: global name 'esult' is not defined
+	
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://hubpages.com/signin/> from <GET http://hubpages.com/signin/>
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://fundly.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://fundly.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://fundly.com/signin',
+	 'title': [u'\n', u'\nFacebook\n']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://magine.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://4thebest.clickondetroit.com/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://mural.ly/browser-not-supported> from <GET https://mural.ly/signin>
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://hubpages.com/signin/> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://hubpages.com/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'https://hubpages.com/signin/',
+	 'title': [u'Sign In with Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.splashmath.com/teachers/signin> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://mural.ly/browser-not-supported> (referer: None)
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.splashmath.com/teachers/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.splashmath.com/teachers/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.mynewsdesk.com/user/signin> (referer: None) ['partial']
+2015-04-01 10:54:50-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.mynewsdesk.com/user/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.mynewsdesk.com/user/signin',
+	 'title': [u' Facebook']}
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.gcflearnfree.org/signin> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.getharvest.com/help/signin> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.getharvest.com/help/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.getharvest.com/help/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://chatroll.com/signin> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Scraped from <200 http://chatroll.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://chatroll.com/signin',
+	 'title': [u'Sign in with Facebook']}
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.littleheroes.com/signin/> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.senecacollege.ca/signin/> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://developers.sna.pr/docs/linked_services/facebook/signin/> (referer: None)
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Scraped from <200 http://developers.sna.pr/docs/linked_services/facebook/signin/>
+	{'desc': '//a/text()',
+	 'link': 'http://developers.sna.pr/docs/linked_services/facebook/signin/',
+	 'title': [u'Signin with Facebook']}
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.verizonwireless.com/mobile-living/signin/> (referer: None) ['partial']
+2015-04-01 10:54:51-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.verizonwireless.com/mobile-living/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://www.verizonwireless.com/mobile-living/signin/',
+	 'title': [u'\n\t\t\t\t\t\t',
+	           u'\n\t\t\t\t\t\tLogin with Facebook\n\t\t\t\t\t',
+	           u'\n\t\t\t\t\t\t',
+	           u'\n\t\t\t\t\t\tLogin with Twitter\n\t\t\t\t\t']}
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.torontopubliclibrary.ca/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.torontopubliclibrary.ca/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.torontopubliclibrary.ca/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.nauticed.org/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://peatix.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.wamda.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Scraped from <200 https://peatix.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://peatix.com/signin',
+	 'title': [u'Twitter', u'Facebook']}
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.seizethedeal.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.seizethedeal.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.seizethedeal.com/signin',
+	 'title': [u'Facebook\n']}
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.justgiving.biz/signin/> from <GET http://www.justgiving.biz/signin>
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.wetransfer.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.adoberevel.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://whootin.com/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Scraped from <200 http://whootin.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://whootin.com/signin',
+	 'title': [u'Sign in with Facebook']}
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.daveramsey.com/company/signin> (referer: None)
+2015-04-01 10:54:52-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://btclend.cloudapp.net/btc/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://mind42.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 https://mind42.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://mind42.com/signin',
+	 'title': [u'\n                        ',
+	           u'\n                        Facebook\n                    ',
+	           u'\n                        ',
+	           u'\n                        Twitter\n                    ']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.justgiving.biz/signin/> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://auth.keyingredient.com/signin/> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.youniqueproducts.com/account/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.landmarkworldwide.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Redirecting (meta refresh) to <GET http://www.toggle.sg/404> from <GET http://www.toggle.sg/en/signin>
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.thedrum.com/account/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.thedrum.com/account/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.thedrum.com/account/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.fixya.com/search/p2479534-www_edmodo_com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.meet-me.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.fixya.com/search/p2479534-www_edmodo_com/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://www.fixya.com/search/p2479534-www_edmodo_com/signin',
+	 'title': [u'Share on Facebook']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://thedevs.org/auth/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 http://thedevs.org/auth/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://thedevs.org/auth/signin',
+	 'title': [u'Sign in with Facebook',
+	           u'Sign in with Google',
+	           u'Sign in with Github']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://tour.nin.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.thrively.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://app.uppidy.com/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 https://app.uppidy.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://app.uppidy.com/signin',
+	 'title': [u'Login with Facebook']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.setlist.fm/signin> (referer: None)
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.setlist.fm/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.setlist.fm/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://help.cubby.com/site/signin> from <GET http://help.cubby.com/signin>
+2015-04-01 10:54:53-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.nimbuzz.com/en/nimbuzzout/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.benchandloom.com/account/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.reed.co.uk/account/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.purview.net/signin/> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.reed.co.uk/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.reed.co.uk/account/signin',
+	 'title': [u'on Facebook']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://help.cubby.com/site/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://goldcoastsocialmedia.com.au/tag/signin/> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://participate.webydo.com/site/signin> from <GET http://participate.webydo.com/signin>
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 http://goldcoastsocialmedia.com.au/tag/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://goldcoastsocialmedia.com.au/tag/signin/',
+	 'title': [u'advertising',
+	           u'Android',
+	           u'apple',
+	           u'Australian',
+	           u'blogging',
+	           u'brand',
+	           u'business',
+	           u'Businesses',
+	           u'consumer',
+	           u'Consumers',
+	           u'Content',
+	           u'email',
+	           u'Engagement',
+	           u'Facebook',
+	           u'Google',
+	           u'Growth',
+	           u'internet',
+	           u'Marketers',
+	           u'marketing',
+	           u'Media',
+	           u'Microsoft',
+	           u'mobile',
+	           u'Network',
+	           u'networks',
+	           u'news',
+	           u'Older',
+	           u'Online',
+	           u'personal injury',
+	           u'privacy',
+	           u'Research',
+	           u'Revenues',
+	           u'search',
+	           u'smartphone',
+	           u'Social',
+	           u'Social Media',
+	           u'social networks',
+	           u'SocNet',
+	           u'Spending',
+	           u'strategy',
+	           u'Technology',
+	           u'Twitter',
+	           u'Users',
+	           u'video',
+	           u'Videos',
+	           u'Web']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.edfringe.com/security/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.edfringe.com/security/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.edfringe.com/security/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://spreets.com.au/user/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://power.water.org/signin/> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 https://spreets.com.au/user/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://spreets.com.au/user/signin',
+	 'title': [u'\n                        Facebook                    ']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 http://power.water.org/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://power.water.org/signin/',
+	 'title': [u'\n                  Log in with Facebook ', u'\n              ']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://participate.webydo.com/site/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.thread.com/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET http://www.toggle.sg/zh/404> from <GET http://www.toggle.sg/404>
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.thread.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.thread.com/signin',
+	 'title': [u'Sign in with Facebook']}
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://www.reachlocal.com/ca/signin> from <GET http://www.reachlocalamericas.com/signin>
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.daybreakmill.com/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.boohoo.com/usa/page/signin> (referer: None)
+2015-04-01 10:54:54-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://www.reachlocal.com/ca/signin> from <GET http://www.reachlocal.com/ca/signin>
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.boohoo.com/usa/page/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://www.boohoo.com/usa/page/signin',
+	 'title': [u' Facebook']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://dribbble.com/rogie/tags/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.exentriq.com/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://top2.igg.com/event/signin/> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://developer.txtweb.com/signin> (referer: None) ['partial']
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.exentriq.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.exentriq.com/signin',
+	 'title': [u'Login with Facebook']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.writeabout.com/signin/> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.winecompanion.com.au/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.winecompanion.com.au/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://www.winecompanion.com.au/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.bravenewtalent.com/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.bravenewtalent.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://www.bravenewtalent.com/signin',
+	 'title': [u'Sign in with Facebook']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.whenify.com/user/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://account.cancer.org/login/?wa=wsignin1.0&wtrealm=https%3a%2f%2fwww.cancer.org%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2015-04-01T14%3a54%3a56Z> from <GET https://www.cancer.org/myacs/account/signin>
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://247m.regentstreetonline.com/signin> from <GET http://247.regentstreetonline.com/signin>
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://demo.photofinale.com/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://www.reachlocal.com/ca/en/signin> from <GET https://www.reachlocal.com/ca/signin>
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://brushfireapp.com/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 https://brushfireapp.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://brushfireapp.com/signin',
+	 'title': [u' Sign in using Facebook',
+	           u' Sign in using Twitter',
+	           u' Sign in using Google+']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.fantasyindex.com/signin> (referer: None)
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.fantasyindex.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.fantasyindex.com/signin',
+	 'title': [u'Find Us on Facebook']}
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET http://www.bookworld.com.au/signin> from <GET http://www.borders.com.au/signin>
+2015-04-01 10:54:55-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://ash.org/listings/signin/> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://www.reachlocal.com/ca/en/sign-in> from <GET https://www.reachlocal.com/ca/en/signin>
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.locqus.com/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.prodibi.com/users/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://allsines.com/user/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.gaydesertguide.com/account/signin/> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://247m.regentstreetonline.com/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Scraped from <200 http://247m.regentstreetonline.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'http://247m.regentstreetonline.com/signin',
+	 'title': [u'Add Facebook']}
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET https://www.reachlocal.com/ca/en/sign-in-0> from <GET https://www.reachlocal.com/ca/en/sign-in>
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://account.cancer.org/login/?wa=wsignin1.0&wtrealm=https%3a%2f%2fwww.cancer.org%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2015-04-01T14%3a54%3a56Z> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://mina-grey.com/cgi-sys/suspendedpage.cgi> from <GET https://mina-grey.com/signin/>
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.toggle.sg/zh/404> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.pandora.com/jerky-boys/jerky-boys-3/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.arcchurches.com/login/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.global-visionaries.org/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://blackfriday.com/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.benego.com/account/signin> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.global-visionaries.org/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://www.global-visionaries.org/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://mina-grey.com/cgi-sys/suspendedpage.cgi> (referer: None)
+2015-04-01 10:54:56-0400 [fb_oauth] DEBUG: Scraped from <200 https://blackfriday.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://blackfriday.com/signin',
+	 'title': [u'Sign In with Facebook']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Redirecting (301) to <GET http://www.bookworld.com.au/login> from <GET http://www.bookworld.com.au/signin>
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.collegelistit-uiowa.com/classifieds/signin/> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.collegelistit-uiowa.com/classifieds/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.collegelistit-uiowa.com/classifieds/signin/',
+	 'title': [u'Login with Facebook']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://support.perfectaudience.com/site/signin> from <GET http://support.perfectaudience.com/signin>
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.orlando.com/account/signin/> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.orlando.com/account/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.orlando.com/account/signin/',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET https://www.bookworld.com.au/login> from <GET http://www.bookworld.com.au/login>
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (404) <GET http://rubykaigi.org/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Ignoring response <404 http://rubykaigi.org/signin>: HTTP status code is not handled or not allowed
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://www.xmarks.com/s/site/www.plaxo.com/signin> from <GET http://www.xmarks.com/site/www.plaxo.com/signin>
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://support.perfectaudience.com/site/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.reachlocal.com/ca/en/sign-in-0> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.reachlocal.com/ca/en/sign-in-0>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.reachlocal.com/ca/en/sign-in-0',
+	 'title': [u'Facebook Like']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://linux.conf.au/person/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.xmarks.com/s/site/www.plaxo.com/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 https://linux.conf.au/person/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://linux.conf.au/person/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.xmarks.com/s/site/www.plaxo.com/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'http://www.xmarks.com/s/site/www.plaxo.com/signin',
+	 'title': [u'\n\t\t\t\t\tFacebook is a social utility that connects people with friends and others who work, study and live around them. People use Facebook to keep up with friends, upload an unlimited number of photos, post links and videos, and learn more about t...\n        ']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.kalahari.com/ct/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Redirecting (302) to <GET http://support.crashlytics.com/site/signin> from <GET http://support.crashlytics.com/signin>
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.kalahari.com/ct/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.kalahari.com/ct/signin',
+	 'title': [u'Join us on Facebook']}
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.spreets.co.nz/user/signin> (referer: None)
+2015-04-01 10:54:57-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.spreets.co.nz/user/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.spreets.co.nz/user/signin',
+	 'title': [u'Sign In with Facebook']}
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://support.crashlytics.com/site/signin> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://pinpointcreative.com/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://ssereward.com/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.shopcherrycreek.com/m/signin> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://jeffspiratescove.com/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Scraped from <200 http://jeffspiratescove.com/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'http://jeffspiratescove.com/signin/',
+	 'title': [u'Login with Facebook']}
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://irisbeta.com/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.starkbros.com/account/signin> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.starkbros.com/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.starkbros.com/account/signin',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.propublica.org/site/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.obu.edu/alumni/listings/signin/> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.propublica.org/site/signin/>
+	{'desc': '//a/text()',
+	 'link': 'http://www.propublica.org/site/signin/',
+	 'title': [u'Become a fan on Facebook']}
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.safetyoptics.com/account/signin> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.bookworld.com.au/login> (referer: None)
+2015-04-01 10:54:58-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.egood.com/signin> (referer: None)
+2015-04-01 10:54:59-0400 [fb_oauth] DEBUG: Scraped from <200 https://www.bookworld.com.au/login>
+	{'desc': '//a/text()',
+	 'link': 'https://www.bookworld.com.au/login',
+	 'title': [u'Facebook']}
+2015-04-01 10:54:59-0400 [fb_oauth] DEBUG: Crawled (200) <GET https://www.originwallpapers.com/signin> (referer: None)
+2015-04-01 10:54:59-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.aaca.net.au/ncdj/index.php/signin> (referer: None)
+2015-04-01 10:54:59-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://en.bestel.az/user/signin> (referer: None)
+2015-04-01 10:54:59-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.spxpo.com/listings/signin> (referer: None)
+2015-04-01 10:55:17-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://www.wpthm.com/plugins/signin> (referer: None)
+2015-04-01 10:55:17-0400 [fb_oauth] DEBUG: Scraped from <200 http://www.wpthm.com/plugins/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'http://www.wpthm.com/plugins/signin',
+	 'title': [u' WordPress Social Login allow your visitors to comment and login with social networks such as Twitter, Facebook, Google, Yahoo and more. ']}
+2015-04-01 10:55:27-0400 [fb_oauth] DEBUG: Retrying <GET http://secular.io/classifieds/signin/> (failed 1 times): 500 Internal Server Error
+2015-04-01 10:55:45-0400 [fb_oauth] INFO: Crawled 168 pages (at 168 pages/min), scraped 88 items (at 88 items/min)
+2015-04-01 10:55:46-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://trulyhermosa.com/listings/signin/> (referer: None)
+2015-04-01 10:55:48-0400 [fb_oauth] DEBUG: Crawled (200) <GET http://secular.io/classifieds/signin/> (referer: None)
+2015-04-01 10:55:48-0400 [fb_oauth] DEBUG: Scraped from <200 http://secular.io/classifieds/signin/>
+	{'desc': '//div/a/text()',
+	 'link': 'http://secular.io/classifieds/signin/',
+	 'title': [u' \xa0Log in with Facebook']}
+2015-04-01 10:56:45-0400 [fb_oauth] INFO: Crawled 170 pages (at 2 pages/min), scraped 89 items (at 1 items/min)
+2015-04-01 10:57:01-0400 [fb_oauth] DEBUG: Retrying <GET http://letsrock.co.uk/signin/> (failed 1 times): TCP connection timed out: 110: Connection timed out.
+2015-04-01 10:57:45-0400 [fb_oauth] INFO: Crawled 170 pages (at 0 pages/min), scraped 89 items (at 0 items/min)
+2015-04-01 10:58:45-0400 [fb_oauth] INFO: Crawled 170 pages (at 0 pages/min), scraped 89 items (at 0 items/min)
+2015-04-01 10:59:08-0400 [fb_oauth] DEBUG: Retrying <GET http://letsrock.co.uk/signin/> (failed 2 times): TCP connection timed out: 110: Connection timed out.
+2015-04-01 10:59:45-0400 [fb_oauth] INFO: Crawled 170 pages (at 0 pages/min), scraped 89 items (at 0 items/min)
+2015-04-01 11:00:45-0400 [fb_oauth] INFO: Crawled 170 pages (at 0 pages/min), scraped 89 items (at 0 items/min)
+2015-04-01 11:01:15-0400 [fb_oauth] DEBUG: Gave up retrying <GET http://letsrock.co.uk/signin/> (failed 3 times): TCP connection timed out: 110: Connection timed out.
+2015-04-01 11:01:15-0400 [fb_oauth] ERROR: Error downloading <GET http://letsrock.co.uk/signin/>: TCP connection timed out: 110: Connection timed out.
+2015-04-01 11:01:15-0400 [fb_oauth] INFO: Closing spider (finished)
+2015-04-01 11:01:15-0400 [fb_oauth] INFO: Stored json feed (89 items) in: ../results/fb_test.json
+2015-04-01 11:01:15-0400 [fb_oauth] INFO: Dumping Scrapy stats:
+	{'downloader/exception_count': 6,
+	 'downloader/exception_type_count/twisted.internet.error.TCPTimedOutError': 3,
+	 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 3,
+	 'downloader/request_bytes': 52296,
+	 'downloader/request_count': 214,
+	 'downloader/request_method_count/GET': 214,
+	 'downloader/response_bytes': 2114511,
+	 'downloader/response_count': 208,
+	 'downloader/response_status_count/200': 168,
+	 'downloader/response_status_count/301': 10,
+	 'downloader/response_status_count/302': 26,
+	 'downloader/response_status_count/404': 3,
+	 'downloader/response_status_count/500': 1,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2015, 4, 1, 15, 1, 15, 717172),
+	 'item_scraped_count': 89,
+	 'log_count/DEBUG': 307,
+	 'log_count/ERROR': 4,
+	 'log_count/INFO': 14,
+	 'response_received_count': 170,
+	 'scheduler/dequeued': 214,
+	 'scheduler/dequeued/memory': 214,
+	 'scheduler/enqueued': 214,
+	 'scheduler/enqueued/memory': 214,
+	 'spider_exceptions/NameError': 2,
+	 'start_time': datetime.datetime(2015, 4, 1, 14, 54, 45, 516948)}
+2015-04-01 11:01:15-0400 [fb_oauth] INFO: Spider closed (finished)

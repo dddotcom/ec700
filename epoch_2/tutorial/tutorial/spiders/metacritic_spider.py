@@ -1,8 +1,8 @@
-from scrapy.spider import BaseSpider
+import scrapy
 from scrapy.selector import HtmlXPathSelector
 from tutorial.items import MetacriticItem
 
-class MetacriticSpider(BaseSpider):
+class MetacriticSpider(scrapy.Spider):
 	name = "metacritic"
 	allowed_comains = ["metacritic.com"]
 	start_urls = [

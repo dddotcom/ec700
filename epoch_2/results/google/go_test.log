@@ -1,0 +1,324 @@
+2015-04-01 11:13:02-0400 [scrapy] INFO: Scrapy 0.24.5 started (bot: tutorial)
+2015-04-01 11:13:02-0400 [scrapy] INFO: Optional features available: ssl, http11
+2015-04-01 11:13:02-0400 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'tutorial.spiders', 'FEED_URI': '../results/go_test.json', 'SPIDER_MODULES': ['tutorial.spiders'], 'BOT_NAME': 'tutorial', 'FEED_FORMAT': 'json', 'LOG_FILE': '../results/go_test.log'}
+2015-04-01 11:13:02-0400 [scrapy] INFO: Enabled extensions: FeedExporter, LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-04-01 11:13:03-0400 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-04-01 11:13:03-0400 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-04-01 11:13:03-0400 [scrapy] INFO: Enabled item pipelines: 
+2015-04-01 11:13:03-0400 [go_oauth] INFO: Spider opened
+2015-04-01 11:13:03-0400 [go_oauth] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-04-01 11:13:03-0400 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2015-04-01 11:13:03-0400 [scrapy] DEBUG: Web service listening on 127.0.0.1:6080
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Crawled (200) <GET https://todaysmeet.com/accounts/signin> (referer: None)
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Scraped from <200 https://todaysmeet.com/accounts/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://todaysmeet.com/accounts/signin',
+	 'title': []}
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://spanningbackup.com/authapi/ssb/login/oauth2?callback=https://spanningbackup.com> from <GET https://spanningbackup.com/signin>
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fspanningbackup.com%2Fauthapi%2Fssb%2Flogin%2Foauth2&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&prompt=none&state=callback%3Dhttps%3A%2F%2Fspanningbackup.com&response_type=code> from <GET https://spanningbackup.com/authapi/ssb/login/oauth2?callback=https://spanningbackup.com>
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Crawled (200) <GET http://demos.krajee.com/google-plugin/signin> (referer: None)
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Scraped from <200 http://demos.krajee.com/google-plugin/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://demos.krajee.com/google-plugin/signin',
+	 'title': [u'http://demos.krajee.com/google-plugin/signin#disqus_thread']}
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.hsn.com/signin> (referer: None)
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://www.google.com/accounts/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en> from <GET https://www.panoramio.com/signin>
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Scraped from <200 https://www.hsn.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.hsn.com/signin',
+	 'title': [u'https://plus.google.com/+HSN']}
+2015-04-01 11:13:03-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://www.caringbridge.org/signin> from <GET http://www.caringbridge.org/signin>
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://cacoo.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://cacoo.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://cacoo.com/signin',
+	 'title': [u'Nulab Account', u'Google', u'Facebook', u'Twitter']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.etsy.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://zoom.us/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://my.haikulearning.com/do/account/xauth> from <GET https://www.haikulearning.com/signin/>
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.etsy.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.etsy.com/signin',
+	 'title': [u'\n            Sign In with Google\n    ']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://zoom.us/signin>
+	{'desc': '//a/text()', 'link': 'https://zoom.us/signin', 'title': [u'Google']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Redirecting (302) to <GET http://connect.garmin.com/en-US/signin> from <GET https://connect.garmin.com/signin>
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://myxperia.sonymobile.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://connect.garmin.com/en-US/signin> from <GET http://connect.garmin.com/en-US/signin>
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://connect.garmin.com/en-US/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.expensify.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://connect.garmin.com/en-US/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://connect.garmin.com/en-US/signin',
+	 'title': [u'\n                ',
+	           u'\n                Google Chrome\n            ']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.expensify.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.expensify.com/signin',
+	 'title': [u'Google', u'Yahoo', u'SAML', u'Intuit']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://app.theresumator.com/home/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.pivotaltracker.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://app.theresumator.com/home/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://app.theresumator.com/home/signin',
+	 'title': [u'/integrations/google/sso']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.pivotaltracker.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.pivotaltracker.com/signin',
+	 'title': [u'Sign in with Google']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.caringbridge.org/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.caringbridge.org/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.caringbridge.org/signin',
+	 'title': [u'https://www.caringbridge.org/oauth/google/login']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.airdroid.com/en/signin/> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.airdroid.com/en/signin/>
+	{'desc': '//a/@href',
+	 'link': 'https://www.airdroid.com/en/signin/',
+	 'title': [u'https://plus.google.com/100470142129660713333']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Retrying <GET https://www.coursera.org/account/signin> (failed 1 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.buzzmath.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Retrying <GET https://www.coursera.org/account/signin> (failed 2 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://www.buzzmath.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.buzzmath.com/signin',
+	 'title': [u'Google Account']}
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Crawled (200) <GET https://yourshow.superhumanlabs.com/signin> (referer: None)
+2015-04-01 11:13:04-0400 [go_oauth] DEBUG: Scraped from <200 https://yourshow.superhumanlabs.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://yourshow.superhumanlabs.com/signin',
+	 'title': [u' Connect your Google Drive']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://my.haikulearning.com/do/account/xauth> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.cleartrip.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Gave up retrying <GET https://www.coursera.org/account/signin> (failed 3 times): [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 11:13:05-0400 [go_oauth] ERROR: Error downloading <GET https://www.coursera.org/account/signin>: [<twisted.python.failure.Failure <class 'OpenSSL.SSL.Error'>>]
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=lso&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dnone%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-db17166da0f9da1&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUKg89PBfQzWjfpUxZ2DiuJIWvs80oATIUi2XKTUmj-wLUhrYDX0tYimn8sck&passive=true&go=true&sarp=1&scc=1> from <GET https://accounts.google.com/o/oauth2/auth?client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fspanningbackup.com%2Fauthapi%2Fssb%2Flogin%2Foauth2&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&prompt=none&state=callback%3Dhttps%3A%2F%2Fspanningbackup.com&response_type=code>
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&access_type=online&redirect_uri=https://spanningbackup.com/authapi/ssb/login/oauth2&state=callback%3Dhttps://spanningbackup.com&prompt=none&client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&hl=en-US&from_login=1&as=-db17166da0f9da1> from <GET https://accounts.google.com/ServiceLogin?service=lso&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dnone%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-db17166da0f9da1&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUKg89PBfQzWjfpUxZ2DiuJIWvs80oATIUi2XKTUmj-wLUhrYDX0tYimn8sck&passive=true&go=true&sarp=1&scc=1>
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://spanningbackup.com/authapi/ssb/login/oauth2?state=callback%3Dhttps://spanningbackup.com&error=immediate_failed&error_subtype=access_denied> from <GET https://accounts.google.com/o/oauth2/auth?response_type=code&scope=https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile&access_type=online&redirect_uri=https://spanningbackup.com/authapi/ssb/login/oauth2&state=callback%3Dhttps://spanningbackup.com&prompt=none&client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&hl=en-US&from_login=1&as=-db17166da0f9da1>
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.adoberevel.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://www.adoberevel.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.adoberevel.com/signin',
+	 'title': [u'/signin/google']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fspanningbackup.com%2Fauthapi%2Fssb%2Flogin%2Foauth2&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&prompt=select_account&state=callback%3Dhttps%3A%2F%2Fspanningbackup.com&response_type=code> from <GET https://spanningbackup.com/authapi/ssb/login/oauth2?state=callback%3Dhttps://spanningbackup.com&error=immediate_failed&error_subtype=access_denied>
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.projectnoah.org/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.kissmetrics.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://www.projectnoah.org/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.projectnoah.org/signin',
+	 'title': [u'https://signin.projectnoah.org/openid/start?token_url=https%3A%2F%2Fwww.projectnoah.org%2Fsignin%2Fcallback%3Fdest%3Dhttps%253A%252F%252Fwww.projectnoah.org%252F&openid_identifier=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://www.kissmetrics.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.kissmetrics.com/signin',
+	 'title': [u'Sign in with Google']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dselect_account%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-3571aab8c492ac8&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUM9Y1S6Rmjtfihw2Iv3JWgWxO9UcoATIUsfmQxWrTFo40xqLNOCIQ4-j7Bc8&sarp=1&scc=1> from <GET https://accounts.google.com/o/oauth2/auth?client_id=632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fspanningbackup.com%2Fauthapi%2Fssb%2Flogin%2Foauth2&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&access_type=online&prompt=select_account&state=callback%3Dhttps%3A%2F%2Fspanningbackup.com&response_type=code>
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.gqueues.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://www.gqueues.com/signin>
+	{'desc': '//div/span/text()',
+	 'link': 'https://www.gqueues.com/signin',
+	 'title': [u'GQueues LLC is not affiliated with Google\u2122']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.girlsaskguys.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 http://www.girlsaskguys.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://www.girlsaskguys.com/signin',
+	 'title': [u'https://plus.google.com/+girlsaskguys']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://eu.wargaming.net/id/signin/> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://eu.wargaming.net/id/signin/>
+	{'desc': '//a/@href',
+	 'link': 'https://eu.wargaming.net/id/signin/',
+	 'title': [u'https://plus.google.com/u/0/105483340120702728969/posts']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.workable.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.shelterchallenge.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://www.workable.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.workable.com/signin',
+	 'title': [u'\nSign in with Google\n', u'\n']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 http://www.shelterchallenge.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://www.shelterchallenge.com/signin',
+	 'title': [u"javascript:var googleConnectLoginWindow = window.open('https://accounts.google.com/o/oauth2/auth?client_id=841660696907.apps.googleusercontent.com&redirect_uri=http%253A%252F%252Fwww.shelterchallenge.com%252Fc%252Flogin%252Fauth2callback&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&state=%2Fprofile','google', 'align=center,directories=no,height=560,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width=1000'); void(''); googleConnectLoginWindow.focus();"]}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dselect_account%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-3571aab8c492ac8&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUM9Y1S6Rmjtfihw2Iv3JWgWxO9UcoATIUsfmQxWrTFo40xqLNOCIQ4-j7Bc8&sarp=1&scc=1> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.certilogo.com/registration/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.dailymotion.com/signin> (referer: None)
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dselect_account%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-3571aab8c492ac8&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUM9Y1S6Rmjtfihw2Iv3JWgWxO9UcoATIUsfmQxWrTFo40xqLNOCIQ4-j7Bc8&sarp=1&scc=1>
+	{'desc': '//a/@href',
+	 'link': 'https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/userinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps://spanningbackup.com/authapi/ssb/login/oauth2%26state%3Dcallback%253Dhttps://spanningbackup.com%26prompt%3Dselect_account%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-3571aab8c492ac8&ltmpl=popup&shdf=Cp4BCxIRdGhpcmRQYXJ0eUxvZ29VcmwaAAwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaH1NwYW5uaW5nIEJhY2t1cCBmb3IgR29vZ2xlIEFwcHMMCxIGZG9tYWluGh9TcGFubmluZyBCYWNrdXAgZm9yIEdvb2dsZSBBcHBzDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUM9Y1S6Rmjtfihw2Iv3JWgWxO9UcoATIUsfmQxWrTFo40xqLNOCIQ4-j7Bc8&sarp=1&scc=1',
+	 'title': [u'https://accounts.google.com/RecoverAccount?service=lso&continue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fauth%3Fresponse_type%3Dcode%26scope%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%2Bhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%26access_type%3Donline%26redirect_uri%3Dhttps%3A%2F%2Fspanningbackup.com%2Fauthapi%2Fssb%2Flogin%2Foauth2%26state%3Dcallback%253Dhttps%3A%2F%2Fspanningbackup.com%26prompt%3Dselect_account%26client_id%3D632855923494-jum8fq0c900u4135ho9hkkf2tbq3rc3o.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-3571aab8c492ac8']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 http://www.certilogo.com/registration/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://www.certilogo.com/registration/signin',
+	 'title': [u'/registration/googleSignin']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Scraped from <200 http://www.dailymotion.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://www.dailymotion.com/signin',
+	 'title': [u'Sign In with Google +']}
+2015-04-01 11:13:05-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.zeropc.com/signin/> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.nauticed.org/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Redirecting (301) to <GET https://hubpages.com/signin/> from <GET http://hubpages.com/signin/>
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://my.geosoft.com/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://magine.com/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://my.geosoft.com/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://my.geosoft.com/signin',
+	 'title': [u'Sign in with your Google account']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://bitcoin.tax/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.torontopubliclibrary.ca/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://bitcoin.tax/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://bitcoin.tax/signin',
+	 'title': [u'/auth/google']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.torontopubliclibrary.ca/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.torontopubliclibrary.ca/signin',
+	 'title': [u'Google Translate']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Redirecting (meta refresh) to <GET https://www9.pearsonvue.com/testtaker/signin/SignInPage/UKCAT> from <GET https://www.pearsonvue.com/ukcat/signin/>
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://quizlet.com/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 http://quizlet.com/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'http://quizlet.com/signin',
+	 'title': [u'\ue056', u'Log In with Google']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.23andme.com/user/signin/> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.23andme.com/user/signin/>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.23andme.com/user/signin/',
+	 'title': [u'Google Plus']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Redirecting (301) to <GET https://id.esa.io/auth/google_oauth2> from <GET https://esa.io/signin>
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://hubpages.com/signin/> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.transifex.com/signin/> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.transifex.com/signin/>
+	{'desc': '//a/@href',
+	 'link': 'https://www.transifex.com/signin/',
+	 'title': [u'/accounts/login/google-oauth2/?next=/signin/']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.coinbase.com/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.coinbase.com/signin>
+	{'desc': '//a/text()',
+	 'link': 'https://www.coinbase.com/signin',
+	 'title': [u'Google Chrome']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.splashmath.com/teachers/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://badoo.com/signin/> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.splashmath.com/teachers/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.splashmath.com/teachers/signin',
+	 'title': [u'/users/auth/google_oauth2?source=web&type=parent']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://elmers.com/account/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.starbucks.com/account/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 http://badoo.com/signin/>
+	{'desc': '//a/text()',
+	 'link': 'http://badoo.com/signin/',
+	 'title': [u'Google']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.gcflearnfree.org/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www9.pearsonvue.com/testtaker/signin/SignInPage/UKCAT> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 http://elmers.com/account/signin>
+	{'desc': '//a/text()',
+	 'link': 'http://elmers.com/account/signin',
+	 'title': [u'Google+']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 https://www.starbucks.com/account/signin>
+	{'desc': '//a/span/text()',
+	 'link': 'https://www.starbucks.com/account/signin',
+	 'title': [u'Google Plus']}
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.screenr.com/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.typepad.com/services/signin> (referer: None)
+2015-04-01 11:13:06-0400 [go_oauth] DEBUG: Scraped from <200 http://www.gcflearnfree.org/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://www.gcflearnfree.org/signin',
+	 'title': [u'https://plus.google.com/+GcflearnfreeOrgplus']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.pinterest.com/xavier12/signin/> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://account.cancer.org/login/?wa=wsignin1.0&wtrealm=https%3a%2f%2fwww.cancer.org%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2015-04-01T15%3a13%3a07Z> from <GET https://www.cancer.org/myacs/account/signin>
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fid.esa.io%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email+profile&state=dea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1> from <GET https://id.esa.io/auth/google_oauth2>
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Demail%2Bprofile%26response_type%3Dcode%26redirect_uri%3Dhttps://id.esa.io/auth/google_oauth2/callback%26access_type%3Doffline%26state%3Ddea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1%26client_id%3D468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D2070396ddd2c2215&ltmpl=popup&shdf=CsMCCxIRdGhpcmRQYXJ0eUxvZ29VcmwatAEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cHM6Ly9lc2EuaW8vaW1hZ2VzL2F1dGgvbG9nby5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGhdlc2EuaW8gKFwoIOKBsOKKluKBsCkvKQwLEgZkb21haW4aF2VzYS5pbyAoXCgg4oGw4oqW4oGwKS8pDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUJ0jwxySetRCdaJjBs7K7xdT6QEQoATIUbCSND0OD_IiK1-qWPlGuD9fqjJ4&sarp=1&scc=1> from <GET https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fid.esa.io%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email+profile&state=dea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1>
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://friendsplus.me/> from <GET https://friendsplus.me/signin>
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET http://live.easygenerator.com/signin> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Scraped from <200 http://live.easygenerator.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://live.easygenerator.com/signin',
+	 'title': [u'http://www.google.com/chrome']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET https://profile.theguardian.com/signin> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET https://friendsplus.me/> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Scraped from <200 https://profile.theguardian.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://profile.theguardian.com/signin',
+	 'title': [u'https://www.google.co.uk/advanced_search?q=site:www.theguardian.com']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Scraped from <200 https://friendsplus.me/>
+	{'desc': '//a/text()',
+	 'link': 'https://friendsplus.me/',
+	 'title': [u'Switch To Google+ Without Leaving Your Facebook Friends Behind (If You Want To)']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET https://servicetask.com/signin/> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Scraped from <200 https://servicetask.com/signin/>
+	{'desc': '//a/text()',
+	 'link': 'https://servicetask.com/signin/',
+	 'title': [u'Sign in with Google']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.paycor.com/faqs/signin> (referer: None)
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Scraped from <200 https://www.paycor.com/faqs/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://www.paycor.com/faqs/signin',
+	 'title': [u'http://www.google.com/chrome/']}
+2015-04-01 11:13:07-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?client_id=1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com&redirect_uri=https://jdemenato.cz/reservation/google_response&state=FZOOiujpiyjf42pWOxfL150401171308&scope=openid%20email%20profile&response_type=code> from <GET https://jdemenato.cz/reservation/auth/google/signin>
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Demail%2Bprofile%26response_type%3Dcode%26redirect_uri%3Dhttps://id.esa.io/auth/google_oauth2/callback%26access_type%3Doffline%26state%3Ddea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1%26client_id%3D468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D2070396ddd2c2215&ltmpl=popup&shdf=CsMCCxIRdGhpcmRQYXJ0eUxvZ29VcmwatAEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cHM6Ly9lc2EuaW8vaW1hZ2VzL2F1dGgvbG9nby5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGhdlc2EuaW8gKFwoIOKBsOKKluKBsCkvKQwLEgZkb21haW4aF2VzYS5pbyAoXCgg4oGw4oqW4oGwKS8pDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUJ0jwxySetRCdaJjBs7K7xdT6QEQoATIUbCSND0OD_IiK1-qWPlGuD9fqjJ4&sarp=1&scc=1> (referer: None)
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Crawled (200) <GET https://ticktick.com/signin> (referer: None)
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Demail%2Bprofile%26response_type%3Dcode%26redirect_uri%3Dhttps://id.esa.io/auth/google_oauth2/callback%26access_type%3Doffline%26state%3Ddea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1%26client_id%3D468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D2070396ddd2c2215&ltmpl=popup&shdf=CsMCCxIRdGhpcmRQYXJ0eUxvZ29VcmwatAEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cHM6Ly9lc2EuaW8vaW1hZ2VzL2F1dGgvbG9nby5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGhdlc2EuaW8gKFwoIOKBsOKKluKBsCkvKQwLEgZkb21haW4aF2VzYS5pbyAoXCgg4oGw4oqW4oGwKS8pDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUJ0jwxySetRCdaJjBs7K7xdT6QEQoATIUbCSND0OD_IiK1-qWPlGuD9fqjJ4&sarp=1&scc=1>
+	{'desc': '//a/@href',
+	 'link': 'https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Demail%2Bprofile%26response_type%3Dcode%26redirect_uri%3Dhttps://id.esa.io/auth/google_oauth2/callback%26access_type%3Doffline%26state%3Ddea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1%26client_id%3D468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D2070396ddd2c2215&ltmpl=popup&shdf=CsMCCxIRdGhpcmRQYXJ0eUxvZ29VcmwatAEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cHM6Ly9lc2EuaW8vaW1hZ2VzL2F1dGgvbG9nby5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGhdlc2EuaW8gKFwoIOKBsOKKluKBsCkvKQwLEgZkb21haW4aF2VzYS5pbyAoXCgg4oGw4oqW4oGwKS8pDAsSFXRoaXJkUGFydHlEaXNwbGF5VHlwZRoHREVGQVVMVAwSA2xzbyIUJ0jwxySetRCdaJjBs7K7xdT6QEQoATIUbCSND0OD_IiK1-qWPlGuD9fqjJ4&sarp=1&scc=1',
+	 'title': [u'https://accounts.google.com/RecoverAccount?service=lso&continue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fauth%3Fscope%3Demail%2Bprofile%26response_type%3Dcode%26redirect_uri%3Dhttps%3A%2F%2Fid.esa.io%2Fauth%2Fgoogle_oauth2%2Fcallback%26access_type%3Doffline%26state%3Ddea0bc8ad74cdc9e7bc2c804cd31983a9e28e375704090b1%26client_id%3D468012557965-e0e1gf2on5mhtie8cfib2p5caqculuae.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D2070396ddd2c2215']}
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Scraped from <200 https://ticktick.com/signin>
+	{'desc': '//a/@href',
+	 'link': 'https://ticktick.com/signin',
+	 'title': [u'https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email&redirect_uri=https://www.ticktick.com/sign/google&state=Lw&response_type=token&client_id=366263775281.apps.googleusercontent.com']}
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26redirect_uri%3Dhttps://jdemenato.cz/reservation/google_response%26state%3DFZOOiujpiyjf42pWOxfL150401171308%26client_id%3D1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-487101c79b4d03c&ltmpl=popup&shdf=CsUCCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa0gEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3JlemVydmFjbmlzeXN0ZW0uamRlbWVuYXRvLmN6L2ltYWdlcy9wcm9kdWN0L25hX3BvcnRhbC5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGglKZGVtZU5hVG8MCxIGZG9tYWluGglKZGVtZU5hVG8MCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhQlUP9BCOZfajF6lKvDp_auhJvtCCgBMhSyFQapv-YxHkSM_v8ejhqaiDSTBg&sarp=1&scc=1> from <GET https://accounts.google.com/o/oauth2/auth?client_id=1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com&redirect_uri=https://jdemenato.cz/reservation/google_response&state=FZOOiujpiyjf42pWOxfL150401171308&scope=openid%20email%20profile&response_type=code>
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26redirect_uri%3Dhttps://jdemenato.cz/reservation/google_response%26state%3DFZOOiujpiyjf42pWOxfL150401171308%26client_id%3D1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-487101c79b4d03c&ltmpl=popup&shdf=CsUCCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa0gEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3JlemVydmFjbmlzeXN0ZW0uamRlbWVuYXRvLmN6L2ltYWdlcy9wcm9kdWN0L25hX3BvcnRhbC5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGglKZGVtZU5hVG8MCxIGZG9tYWluGglKZGVtZU5hVG8MCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhQlUP9BCOZfajF6lKvDp_auhJvtCCgBMhSyFQapv-YxHkSM_v8ejhqaiDSTBg&sarp=1&scc=1> (referer: None)
+2015-04-01 11:13:08-0400 [go_oauth] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26redirect_uri%3Dhttps://jdemenato.cz/reservation/google_response%26state%3DFZOOiujpiyjf42pWOxfL150401171308%26client_id%3D1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-487101c79b4d03c&ltmpl=popup&shdf=CsUCCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa0gEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3JlemVydmFjbmlzeXN0ZW0uamRlbWVuYXRvLmN6L2ltYWdlcy9wcm9kdWN0L25hX3BvcnRhbC5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGglKZGVtZU5hVG8MCxIGZG9tYWluGglKZGVtZU5hVG8MCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhQlUP9BCOZfajF6lKvDp_auhJvtCCgBMhSyFQapv-YxHkSM_v8ejhqaiDSTBg&sarp=1&scc=1>
+	{'desc': '//a/@href',
+	 'link': 'https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26redirect_uri%3Dhttps://jdemenato.cz/reservation/google_response%26state%3DFZOOiujpiyjf42pWOxfL150401171308%26client_id%3D1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-487101c79b4d03c&ltmpl=popup&shdf=CsUCCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa0gEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3JlemVydmFjbmlzeXN0ZW0uamRlbWVuYXRvLmN6L2ltYWdlcy9wcm9kdWN0L25hX3BvcnRhbC5wbmcmY29udGFpbmVyPWxzbyZnYWRnZXQ9YSZyZXdyaXRlTWltZT1pbWFnZS8qJnJlc2l6ZV9oPTEyMCZyZXNpemVfdz0xMjAmbm9fZXhwYW5kPTEMCxIVdGhpcmRQYXJ0eURpc3BsYXlOYW1lGglKZGVtZU5hVG8MCxIGZG9tYWluGglKZGVtZU5hVG8MCxIVdGhpcmRQYXJ0eURpc3BsYXlUeXBlGgdERUZBVUxUDBIDbHNvIhQlUP9BCOZfajF6lKvDp_auhJvtCCgBMhSyFQapv-YxHkSM_v8ejhqaiDSTBg&sarp=1&scc=1',
+	 'title': [u'https://accounts.google.com/RecoverAccount?service=lso&continue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fauth%3Fresponse_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%26redirect_uri%3Dhttps%3A%2F%2Fjdemenato.cz%2Freservation%2Fgoogle_response%26state%3DFZOOiujpiyjf42pWOxfL150401171308%26client_id%3D1052789055095-1gjehc0uea47vhd5lhsoq5gbr48uunn8.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D-487101c79b4d03c']}
+2015-04-01 11:13:09-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en> from <GET https://www.google.com/accounts/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en>
+2015-04-01 11:13:09-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.bbc.co.uk/id/info/signin> (referer: None)
+2015-04-01 11:13:09-0400 [go_oauth] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en> (referer: None)
+2015-04-01 11:13:09-0400 [go_oauth] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en>
+	{'desc': '//a/@href',
+	 'link': 'https://accounts.google.com/ServiceLogin?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin&hl=en',
+	 'title': [u'https://accounts.google.com/RecoverAccount?service=panoramio&continue=https%3A%2F%2Fssl.panoramio.com%2Fdo%2Fga_signin']}
+2015-04-01 11:13:09-0400 [go_oauth] DEBUG: Crawled (200) <GET http://www.blackpagesohio.com/listings/signin/> (referer: None)
+2015-04-01 11:13:10-0400 [go_oauth] DEBUG: Crawled (200) <GET https://www.thefa.com/account/signin> (referer: None)
+2015-04-01 11:13:10-0400 [go_oauth] DEBUG: Scraped from <200 https://www.thefa.com/account/signin>
+	{'desc': '//div/a/text()',
+	 'link': 'https://www.thefa.com/account/signin',
+	 'title': []}
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Redirecting (302) to <GET http://channelyzr.com/auth/google_oauth2> from <GET http://channelyzr.com/signin>
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Crawled (200) <GET http://ewgc.pathwaystohealthtulsa.org/myfoodcoach/signin> (referer: None)
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Scraped from <200 http://ewgc.pathwaystohealthtulsa.org/myfoodcoach/signin>
+	{'desc': '//a/@href',
+	 'link': 'http://ewgc.pathwaystohealthtulsa.org/myfoodcoach/signin',
+	 'title': [u'http://play.google.com/store/apps/details?id=net.kidney.NKF']}
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=700358552796.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fchannelyzr.com%2Fauth%2Fgoogle_oauth2%2Fcallback&state=e341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491&prompt=consent+select_account&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyt-analytics.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube&access_type=offline> from <GET http://channelyzr.com/auth/google_oauth2>
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Redirecting (302) to <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.googleapis.com/auth/userinfo.profile%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/yt-analytics.readonly%2Bhttps://www.googleapis.com/auth/youtube%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp://channelyzr.com/auth/google_oauth2/callback%26state%3De341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491%26prompt%3Dconsent%2Bselect_account%26client_id%3D700358552796.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D471a917800a0228a&ltmpl=nosignup&shdf=CowDCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa-wEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3Byb2QtZnNuZXR3cC1jZG4uZnVsbHNjcmVlbi5uZXQvd3AtY29udGVudC90aGVtZXMvcm9vdHMtc2Fzcy9hc3NldHMvbG9nb3MvZnVsbHNjcmVlbl9ibGFja19pY29uLnBuZyZjb250YWluZXI9bHNvJmdhZGdldD1hJnJld3JpdGVNaW1lPWltYWdlLyomcmVzaXplX2g9MTIwJnJlc2l6ZV93PTEyMCZub19leHBhbmQ9MQwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEgZkb21haW4aGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEhV0aGlyZFBhcnR5RGlzcGxheVR5cGUaB0RFRkFVTFQMEgNsc28iFJAeFqj0Y1SlM-ceJgGh7zpKWh1dKAEyFF5QTKravkOwK4W5r-0D9DXUx7gF&sarp=1&scc=1> from <GET https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=700358552796.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fchannelyzr.com%2Fauth%2Fgoogle_oauth2%2Fcallback&state=e341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491&prompt=consent+select_account&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyt-analytics.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube&access_type=offline>
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Crawled (200) <GET https://account.cancer.org/login/?wa=wsignin1.0&wtrealm=https%3a%2f%2fwww.cancer.org%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2015-04-01T15%3a13%3a07Z> (referer: None)
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Crawled (200) <GET https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.googleapis.com/auth/userinfo.profile%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/yt-analytics.readonly%2Bhttps://www.googleapis.com/auth/youtube%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp://channelyzr.com/auth/google_oauth2/callback%26state%3De341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491%26prompt%3Dconsent%2Bselect_account%26client_id%3D700358552796.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D471a917800a0228a&ltmpl=nosignup&shdf=CowDCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa-wEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3Byb2QtZnNuZXR3cC1jZG4uZnVsbHNjcmVlbi5uZXQvd3AtY29udGVudC90aGVtZXMvcm9vdHMtc2Fzcy9hc3NldHMvbG9nb3MvZnVsbHNjcmVlbl9ibGFja19pY29uLnBuZyZjb250YWluZXI9bHNvJmdhZGdldD1hJnJld3JpdGVNaW1lPWltYWdlLyomcmVzaXplX2g9MTIwJnJlc2l6ZV93PTEyMCZub19leHBhbmQ9MQwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEgZkb21haW4aGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEhV0aGlyZFBhcnR5RGlzcGxheVR5cGUaB0RFRkFVTFQMEgNsc28iFJAeFqj0Y1SlM-ceJgGh7zpKWh1dKAEyFF5QTKravkOwK4W5r-0D9DXUx7gF&sarp=1&scc=1> (referer: None)
+2015-04-01 11:13:12-0400 [go_oauth] DEBUG: Scraped from <200 https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.googleapis.com/auth/userinfo.profile%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/yt-analytics.readonly%2Bhttps://www.googleapis.com/auth/youtube%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp://channelyzr.com/auth/google_oauth2/callback%26state%3De341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491%26prompt%3Dconsent%2Bselect_account%26client_id%3D700358552796.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D471a917800a0228a&ltmpl=nosignup&shdf=CowDCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa-wEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3Byb2QtZnNuZXR3cC1jZG4uZnVsbHNjcmVlbi5uZXQvd3AtY29udGVudC90aGVtZXMvcm9vdHMtc2Fzcy9hc3NldHMvbG9nb3MvZnVsbHNjcmVlbl9ibGFja19pY29uLnBuZyZjb250YWluZXI9bHNvJmdhZGdldD1hJnJld3JpdGVNaW1lPWltYWdlLyomcmVzaXplX2g9MTIwJnJlc2l6ZV93PTEyMCZub19leHBhbmQ9MQwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEgZkb21haW4aGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEhV0aGlyZFBhcnR5RGlzcGxheVR5cGUaB0RFRkFVTFQMEgNsc28iFJAeFqj0Y1SlM-ceJgGh7zpKWh1dKAEyFF5QTKravkOwK4W5r-0D9DXUx7gF&sarp=1&scc=1>
+	{'desc': '//a/@href',
+	 'link': 'https://accounts.google.com/ServiceLogin?service=lso&passive=1209600&continue=https://accounts.google.com/o/oauth2/auth?scope%3Dhttps://www.googleapis.com/auth/userinfo.profile%2Bhttps://www.googleapis.com/auth/userinfo.email%2Bhttps://www.googleapis.com/auth/yt-analytics.readonly%2Bhttps://www.googleapis.com/auth/youtube%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp://channelyzr.com/auth/google_oauth2/callback%26state%3De341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491%26prompt%3Dconsent%2Bselect_account%26client_id%3D700358552796.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D471a917800a0228a&ltmpl=nosignup&shdf=CowDCxIRdGhpcmRQYXJ0eUxvZ29Vcmwa-wEvL2ltYWdlcy1sc28tb3BlbnNvY2lhbC5nb29nbGV1c2VyY29udGVudC5jb20vZ2FkZ2V0cy9wcm94eT91cmw9aHR0cDovL3Byb2QtZnNuZXR3cC1jZG4uZnVsbHNjcmVlbi5uZXQvd3AtY29udGVudC90aGVtZXMvcm9vdHMtc2Fzcy9hc3NldHMvbG9nb3MvZnVsbHNjcmVlbl9ibGFja19pY29uLnBuZyZjb250YWluZXI9bHNvJmdhZGdldD1hJnJld3JpdGVNaW1lPWltYWdlLyomcmVzaXplX2g9MTIwJnJlc2l6ZV93PTEyMCZub19leHBhbmQ9MQwLEhV0aGlyZFBhcnR5RGlzcGxheU5hbWUaGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEgZkb21haW4aGENoYW5uZWx5enIgYnkgRnVsbHNjcmVlbgwLEhV0aGlyZFBhcnR5RGlzcGxheVR5cGUaB0RFRkFVTFQMEgNsc28iFJAeFqj0Y1SlM-ceJgGh7zpKWh1dKAEyFF5QTKravkOwK4W5r-0D9DXUx7gF&sarp=1&scc=1',
+	 'title': [u'https://accounts.google.com/RecoverAccount?service=lso&continue=https%3A%2F%2Faccounts.google.com%2Fo%2Foauth2%2Fauth%3Fscope%3Dhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile%2Bhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%2Bhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyt-analytics.readonly%2Bhttps%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube%26response_type%3Dcode%26access_type%3Doffline%26redirect_uri%3Dhttp%3A%2F%2Fchannelyzr.com%2Fauth%2Fgoogle_oauth2%2Fcallback%26state%3De341f697744a1ce9b23295f95b5b5a7b08b7205c9decb491%26prompt%3Dconsent%2Bselect_account%26client_id%3D700358552796.apps.googleusercontent.com%26hl%3Den-US%26from_login%3D1%26as%3D471a917800a0228a']}
+2015-04-01 11:13:12-0400 [go_oauth] INFO: Closing spider (finished)
+2015-04-01 11:13:12-0400 [go_oauth] INFO: Stored json feed (49 items) in: ../results/go_test.json
+2015-04-01 11:13:12-0400 [go_oauth] INFO: Dumping Scrapy stats:
+	{'downloader/exception_count': 3,
+	 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 3,
+	 'downloader/request_bytes': 29104,
+	 'downloader/request_count': 91,
+	 'downloader/request_method_count/GET': 91,
+	 'downloader/response_bytes': 1131750,
+	 'downloader/response_count': 88,
+	 'downloader/response_status_count/200': 64,
+	 'downloader/response_status_count/301': 2,
+	 'downloader/response_status_count/302': 22,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2015, 4, 1, 15, 13, 12, 710124),
+	 'item_scraped_count': 49,
+	 'log_count/DEBUG': 142,
+	 'log_count/ERROR': 1,
+	 'log_count/INFO': 8,
+	 'response_received_count': 63,
+	 'scheduler/dequeued': 91,
+	 'scheduler/dequeued/memory': 91,
+	 'scheduler/enqueued': 91,
+	 'scheduler/enqueued/memory': 91,
+	 'start_time': datetime.datetime(2015, 4, 1, 15, 13, 3, 108880)}
+2015-04-01 11:13:12-0400 [go_oauth] INFO: Spider closed (finished)

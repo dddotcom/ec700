@@ -1,8 +1,8 @@
-from scrapy.spider import BaseSpider
+import scrapy
 from scrapy.selector import HtmlXPathSelector
 from tutorial.items import FinalFantasyItem
 
-class FinalFantasySpider(BaseSpider):
+class FinalFantasySpider(scrapy.Spider):
 	name = "ff"
 	allowed_comains = ["ffxiv.consolegameswiki.com"]
 	start_urls = [
