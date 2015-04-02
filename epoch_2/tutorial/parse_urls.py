@@ -15,7 +15,8 @@ def get_sites_for_idp(idp):
 	if "twitter" in idp:
 		return "../twitter_sites.json"
 	if "facebook" in idp:
-		return "../facebook_sites.json"
+		# return "../facebook_sites.json"
+		return "out.json"
 	if "google" in idp:
 		return "../google_sites.json"
 
@@ -54,20 +55,10 @@ def generate_unique_url_list(json_file):
 	f.close()
 
 def get_many_results():
+	start_site = 400
 	num_sites = 1000
-	start_urls = []
-	for i in range(num_sites/100):
-		new_url = "https://www.google.com/search?q=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&oq=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&num=100&start=" + str(i*100) + "&aqs=chrome..69i57.987j0j1&sourceid=chrome&es_sm=93&ie=UTF-8"
-		start_urls.append(new_url)
-	
 	f = open('generated_urls.txt','w')
-	f.write("start_urls = [" + "\n")
-	for url in start_urls:
-		if url == start_urls[-1]:
-			f.write('\t"' + url + '"\n')
-		else:
-			f.write('\t"' + url + '",\n')
-	f.write("]")
+	for i in range((num_sites - start_site)/100):
+		new_url = "https://www.google.com/search?q=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&oq=sign+in+with+facebook+inurl%3A%2Fsignin%2F+-site%3Afacebook.com+-site%3Agithub.com+-site%3Astackoverflow.com&num=100&start=" + str(start_site + i*100) + "&aqs=chrome..69i57.987j0j1&sourceid=chrome&es_sm=93&ie=UTF-8&filter=0"
+		f.write(new_url + '\n')
 	f.close()
-
-get_many_results()
