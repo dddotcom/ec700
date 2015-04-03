@@ -83,6 +83,7 @@ while True:
 			break
 		else:
 			confirm.click()
+			sleep(2)
 	except WebDriverException:
 		# It's tough to tell exactly when a window has
 		# closed.
