@@ -249,11 +249,11 @@ def test_session_fixation_smarter(json):
 		session_cookies_captured = ( sessioncookie1 != sessioncookie2 ) and ( sessioncookie2 == get_session_cookie(browser1) )
 		sign_up_success = browser1.windows[0].url == base_url
 
-
+		final_url = browser1.windows[0].url
 		browser1.quit()
 
 		if session_cookies_captured:
-			return sign_up_success
+			return final_url, base_url
 		else:
 			return None
 	except:
@@ -270,10 +270,8 @@ with open('fb_test.json') as f:
 
     if vulnerable == None:
     	print "can't tell"
-    elif vulnerable == True:
-    	print "potentionally vulnerable"
-    else: 
-    	print "not vulnerable to session swapping"
+    else:
+    	print "potentionally vulnerable:" + vulnerable[0]+","+vulnerable[1]
 
     # for i in json:
     # 	print i, test_session_fixation_smarter(i)
