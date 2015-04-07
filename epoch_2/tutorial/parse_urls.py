@@ -15,8 +15,8 @@ def get_sites_for_idp(idp):
 	if "twitter" in idp:
 		return "../twitter_sites.json"
 	if "facebook" in idp:
-		# return "../facebook_sites.json"
-		return "out.json"
+		return "../facebook_sites.json"
+		# return "out.json"
 	if "google" in idp:
 		return "../google_sites.json"
 

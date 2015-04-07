@@ -31,18 +31,18 @@ else
 		# > out.json
 		# scrapy crawl google -o out.json 2>&1
 
-		# echo "Retrieving valid $1 login urls..."
-		# > check_these_sites.txt
-		# python -c"import parse_urls; parse_urls.find_login_pages('$1')"
+		echo "Retrieving valid $1 login urls..."
+		> check_these_sites.txt
+		python -c"import parse_urls; parse_urls.find_login_pages('$1')"
 
-		 # echo "Starting oauth scraper: $2..."
-		 # #> ../results/oauth_sites.json
-		 # scrapy crawl $2 -o ../results/$3.json --logfile=../results/$3.log &
-		 # pid=$!
-		 # while kill -0 $pid 2> /dev/null; do
-		 # 	echo -ne "."
-		 # 	sleep 0.5
-		 # done
+		 echo "Starting oauth scraper: $2..."
+		 #> ../results/oauth_sites.json
+		 scrapy crawl $2 -o ../results/$3.json --logfile=../results/$3.log &
+		 pid=$!
+		 while kill -0 $pid 2> /dev/null; do
+		 	echo -ne "."
+		 	sleep 0.5
+		 done
 
 		echo -ne "\nGenerating output of verified URLS..."
 		cd ../results
