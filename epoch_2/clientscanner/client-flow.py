@@ -7,20 +7,31 @@
 #
  
 import re
+import json
 
 from splinter.browser import Browser
 from bs4 import BeautifulSoup
 
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import WebDriverException, NoAlertPresentException
+
+from random import randint
 from pprint import pprint
 from time import sleep
+from urlparse import urlparse
 
 verbose = False
 
 browser = Browser()
 
-# TODO: get url from file
-url = 'https://www.goodreads.com/user/sign_in?source=home'
+with open('../results/facebook/fb_test.json', 'r') as file:
+	files = json.load(file)
+
+fileno = randint(0, len(files)-1)
+
+url = files[fileno]['link']
+
+# For the demo, we used dailymotion's sign in page 
+#url = 'http://www.dailymotion.com/signin'
 
 browser.visit(url)
 
@@ -48,14 +59,20 @@ regex = '|'.join(candidates)
 found = False
 
 for a in links:
-    if a['href'] == "#":
-        classes = a['class']
-	for cls in classes:
-		if re.match(regex, cls, re.IGNORECASE):
-			found = True	
-			break
-	if found:
-		break	
+	url = urlparse(a['href'])
+	if a['href'] == "#" or url.scheme == 'javascript':
+		try:	
+			classes = a['class']
+		except KeyError:
+			continue
+
+		for cls in classes:
+			print "trying cls: ", cls
+			if re.match(regex, cls, re.IGNORECASE):
+				found = True	
+				break
+		if found:
+			break	
 if found:
 	print "Found the Facebook button!"
 	btn = browser.find_by_css('.'+cls)
@@ -64,6 +81,8 @@ else:
 	print "Could not find Facebook button, closing browser now..."
 	browser.quit()
   	exit()
+
+sleep(1)
 
 win = browser.windows[0]
 popup = browser.windows[-1]
@@ -96,9 +115,11 @@ browser.windows.current = win
 # it
 sleep(3)
 
-with browser.get_alert() as alert:
-	if alert:
-		alert.dismiss()
+try:
+	alert = browser.get_alert()
+	alert.dismiss()
+except NoAlertPresentException:
+	pass
 
 # Get the new cookies
 browser.execute_script("window.KO.cookies1 = window.KO.getcookies();")
